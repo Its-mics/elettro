@@ -465,39 +465,87 @@ Si deduce facilmente che anche nel caso in cui si abbiano $N$ cariche, anche con
 Di conseguenza, il teorema di Stokes risulta valido anche in questo caso.
 
 \section{Introduzione al potenziale}
-Il \textbf{potenziale elettrico} ${V(\vec r)}$ è una grandezza scalare che caratterizza un campo elettrostatico $ \vec{E}(\vec{r})$. 
-Poiché l'integrale di linea non dipende dal percorso (ma solo dal punto iniziale e finale), si ha:
-\[
-\boxed{
-V(\vec{r}) \equiv - \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d\vec{l}
-}
-\]
-Qui $\mathcal{O}$  è un punto di riferimento standard che  abbiamo concordato in precedenza; V dipende quindi solo dal punto $\vec{r}$. 
-Da questa definizione si nota che ciò che ha significato fisico è la differenza di potenziale (tra 2 punti): 
 
+Il \textbf{potenziale elettrico} \(V(\vec r)\) è una grandezza scalare che caratterizza un campo elettrostatico \(\vec{E}(\vec r)\).
+Poiché, per un campo elettrostatico conservativo, l'integrale di linea è indipendente dal percorso (dipende solo dai punti iniziale e finale), si definisce
 \[
-\Delta V_{ab}  = V(b) - V(a) = - \int_{\mathcal{O}}^{b} \vec{E} \cdot d\vec{l} + \int_{\mathcal{O}}^{a} \vec{E} \cdot d\vec{l}
-= - \int_{\mathcal{O}}^{b} \vec{E} \cdot d\vec{l} - \int_{a}^{\mathcal{O}} \vec{E} \cdot d\vec{l}
-= - \int_{a}^{b} \vec{E} \cdot d\vec{l}
-\]
-Dal teorema fondamentale del calcolo si ha:
-$$
-V(b) - V(a)= \int_{{a}}^{b} ( \vec{\nabla}V ) \cdot d\vec{l}
-$$
-Da cui si ricava:
-$$
-- \int_{a}^{b} \vec{E} \cdot d\vec{l} = \int_{{a}}^{b} ( \vec{\nabla}V(\vec{r}) ) \cdot d\vec{l}
-$$
-Ottenendo infine:
-\[
-\boxed{
-V(\vec{r}) \equiv - \int_{\mathcal{O}}^{\vec{r}} \vec{E} \cdot d\vec{l}
+\boxed{%
+V(\vec{r}) \equiv - \int_{\mathcal{O}}^{\vec{r}} \vec{E}(\vec{r}\,') \cdot d\vec{l}
 }
 \]
-da modificare dio can
+dove \(\mathcal{O}\) è un punto di riferimento scelto (convenzionalmente il punto in cui si assegna \(V=0\)). Di conseguenza \(V\) dipende solo dalla posizione \(\vec r\).
+
+Ciò che ha significato fisico è la differenza di potenziale tra due punti \(a\) e \(b\):
+\[
+\Delta V_{ab} = V(b)-V(a) = -\int_{a}^{b} \vec{E}\cdot d\vec{l}.
+\]
+Dal teorema fondamentale del calcolo (applicato lungo una curva) si ha inoltre
+\[
+V(b)-V(a)=\int_{a}^{b} (\nabla V)\cdot d\vec{l}.
+\]
+Poiché le due espressioni valgono per ogni coppia di punti \(a,b\), si ottiene la relazione locale
+\[
+\boxed{\vec{E}(\vec r) = -\,\nabla V(\vec r).}
+\]
+
+\subsection*{Commenti sul potenziale}
+
+\begin{itemize}
+  \item Utilizzare il potenziale risulterà spesso più semplice per determinare il campo elettrico.
+  \item Il punto di riferimento \(\mathcal{O}\). Cambiare il punto di riferimento equivale ad aggiungere una costante \(C\) al potenziale. Infatti, scegliendo un altro riferimento \(\mathcal{O}'\),
+    \[
+      V'(\vec{r}) = - \int_{\mathcal{O}'}^{\vec{r}} \vec{E}\cdot d\vec{l}
+      = -\int_{\mathcal{O}'}^{\mathcal{O}} \vec{E}\cdot d\vec{l} -\int_{\mathcal{O}}^{\vec{r}} \vec{E}\cdot d\vec{l}
+      = V(\vec{r}) + C,
+    \]
+    dove \(C = -\displaystyle\int_{\mathcal{O}'}^{\mathcal{O}} \vec{E}\cdot d\vec{l}\). Naturalmente aggiungere una costante a \(V\) non modifica né le differenze di potenziale né il gradiente \(\nabla V\).
+  \item Principio di sovrapposizione: se \(\vec{E}=\sum_{i=1}^N \vec{E}_i\), allora
+    \[
+      V(\vec r) = -\int_{\mathcal{O}}^{\vec r} \vec{E}\cdot d\vec l
+               = -\int_{\mathcal{O}}^{\vec r}\sum_{i=1}^N\vec{E}_i\cdot d\vec l
+               = \sum_{i=1}^N \left(-\int_{\mathcal{O}}^{\vec r}\vec{E}_i\cdot d\vec l\right)
+               = \sum_{i=1}^N V_i(\vec r).
+    \]
+  \item Unità di misura: il potenziale si misura in Volt (V), dove
+    \[
+      [V] = \mathrm{V} = \frac{\mathrm{J}}{\mathrm{C}} = \frac{\mathrm{N\,m}}{\mathrm{C}}.
+    \]
+\end{itemize}
 
 \section{Potenziale della carica puntiforme}
+
+Per una carica puntiforme \(q\) posta nell'origine il campo elettrico è
+\[
+\vec{E}(\vec r)=\frac{1}{4\pi\varepsilon_0}\,\frac{q}{r^{2}}\hat r.
+\]
+Scegliendo come riferimento il potenziale nullo all'infinito (\(\mathcal{O}=\infty\)) si ha
+\[
+V(\vec r)= -\int_{\infty}^{r} \vec{E}\cdot d\vec l
+= -\int_{\infty}^{r} \frac{q}{4\pi\varepsilon_0}\,\frac{1}{r'^{2}}\,dr'
+= \frac{q}{4\pi\varepsilon_0}\,\frac{1}{r}.
+\]
+Quindi il potenziale di una carica puntiforme (con \(V(\infty)=0\)) è
+\[
+\boxed{\,V(\vec r)=\dfrac{q}{4\pi\varepsilon_0\,r}\,.}
+\]
+
+Ora, per un sistema discreto di \(N\) cariche puntiformi \(\{q_i\}\) distribuite nelle posizioni \(\{\vec r_i\}\), il principio di sovrapposizione afferma che il campo totale è la somma dei campi individuali:
+\[
+\vec{E}(\vec r)=\sum_{i=1}^N \vec{E}_i(\vec r).
+\]
+Ne segue che il potenziale totale, definito come
+\[
+V(\vec r) = -\int_{\infty}^{\vec r} \vec{E}(\vec r\,')\cdot d\vec l,
+\]
+si può scrivere come somma dei contributi individuali:
+
+\[
+\boxed{\,V(\vec r)=\sum_{i=1}^{N}\dfrac{q_i}{4\pi\varepsilon_0\,|\vec r-\vec r_i|}\, .}
+\]
+
 \section{Potenziale di una distribuzione uniforme di carica}
+
+
 \section{Esempi}
 \section{Equazione di Poisson}
 \section{Condizioni al contorno}
