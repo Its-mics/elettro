@@ -544,7 +544,22 @@ si può scrivere come somma dei contributi individuali:
 \]
 
 \section{Potenziale di una distribuzione uniforme di carica}
-Il
+
+Calcoliamo il potenziale generato da una distribuzione volumetrica di carica. Conoscendo il potenziale di una carica puntiforme, si divide il volume in elementi infinitesimi di carica \(dq\) e si sommano (integrando) i contributi di tutte le parti:
+
+\[
+V(\vec{r}) = \frac{1}{4\pi\varepsilon_0}\int_{\mathcal{V}}\frac{1}{|\vec{r}-\vec{r}\,'|}\,dq.
+\]
+
+Ricordando che \(dq=\rho(\vec{r}\,')\,dV'\), si ottiene
+
+\[
+\boxed{%
+V(\vec{r}) = \frac{1}{4\pi\varepsilon_0}\int_{\mathcal{V}}\frac{\rho(\vec{r}\,')}{|\vec{r}-\vec{r}\,'|}\,dV'
+}
+\]
+dove \(\mathcal{V}\) indica il dominio volumetrico occupato dalla distribuzione di carica e \(\rho(\vec r\,')\) è la densità volumetrica di carica.
+
 
 \section{Esempi}
 \section{Equazione di Poisson}

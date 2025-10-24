@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761341680.07632 "c:/Users/standard/Desktop/elettro/main.tex" "main.pdf" "main" 1761341681.92745 0
+["pdflatex"] 1761342895.21308 "c:/Users/standard/Desktop/elettro/main.tex" "main.pdf" "main" 1761342898.43463 0
   "C:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty" 1576433666 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -197,11 +197,11 @@
   "C:/Users/standard/AppData/Local/Programs/MiKTeX/tex/latex/pgf/utilities/pgfrcs.sty" 1673775190 325 f9f16d12354225b7dd52a3321f085955 ""
   "C:/Users/standard/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/standard/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
-  "c:/Users/standard/Desktop/elettro/main.tex" 1761341674 41752 6a997821b866a4758c5191a622f59005 ""
-  "main.aux" 1761341681 18798 8ac7b3eb401e3eb267cb9134b870b308 "pdflatex"
-  "main.out" 1761341681 24922 58579b1341a259f7bee05daed7ff4bbc "pdflatex"
-  "main.tex" 1761341674 41752 6a997821b866a4758c5191a622f59005 ""
-  "main.toc" 1761341681 11772 1c542e0c5789f0b36c4123bad7d33535 "pdflatex"
+  "c:/Users/standard/Desktop/elettro/main.tex" 1761342893 42450 276222918c67ffcce61aa357648fe292 ""
+  "main.aux" 1761342898 18798 8ac7b3eb401e3eb267cb9134b870b308 "pdflatex"
+  "main.out" 1761342898 24922 58579b1341a259f7bee05daed7ff4bbc "pdflatex"
+  "main.tex" 1761342893 42450 276222918c67ffcce61aa357648fe292 ""
+  "main.toc" 1761342898 11772 1c542e0c5789f0b36c4123bad7d33535 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
