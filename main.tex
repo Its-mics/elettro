@@ -563,7 +563,57 @@ dove \(\mathcal{V}\) indica il dominio volumetrico occupato dalla distribuzione 
 
 \section{Esempi}
 \section{Equazione di Poisson}
-\section{Condizioni al contorno}
+
+Abbiamo trovato che il \textbf{campo elettrico} ($\vec{E}$) può essere scritto come il \textbf{gradiente} di una funzione scalare, il \textbf{potenziale elettrostatico} ($V$):
+$$
+\vec{E} = - \vec{\nabla} V
+$$
+mentre dalla \textbf{legge di Gauss} per il campo elettrico nel vuoto si ha:
+$$
+\vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0}
+$$
+dove $\rho$ è la densità di carica e $\epsilon_0$ è la permittività elettrica del vuoto.
+Mettendole assieme (sostituendo la prima nella seconda) si ottiene:
+$$
+\vec{\nabla} \cdot (-\vec{\nabla} V) = \frac{\rho}{\epsilon_0}
+$$
+ovvero
+$$
+\nabla^2 V = - \frac{\rho}{\epsilon_0}
+$$
+Si trova quindi l'\textbf{Equazione di Poisson}, dove $\nabla^2 = \vec{\nabla} \cdot \vec{\nabla}$ è l'operatore \textbf{Laplaciano}.
+Perciò, in una regione dove non ci sono cariche, la \textbf{densità di carica è nulla} ($\rho=0$), si ottiene:
+$$
+\nabla^2 V = 0
+$$
+Ottenendo l'\textbf{Equazione di Laplace}.
+
+
+\section{Condizioni al contorno / Boundary conditions}
+  Per un piano infinito con densità superficiale $\sigma$ il campo è uniforme da entrambi i lati e si verifica
+  $$
+  \Delta E_{\perp} = \frac{\sigma}{\varepsilon_0}, \qquad \Delta E_{\parallel} = 0.
+  $$
+  \item \textbf{Due piani con cariche opposte:}\\
+  Anche in questo caso valgono le stesse condizioni di discontinuità per la componente normale e continuità per la tangenziale:
+  $$
+  \Delta E_{\perp} = \frac{\sigma}{\varepsilon_0}, \qquad \Delta E_{\parallel} = 0.
+  $$
+  \item \textbf{Sfera cava con carica superficiale (guscio sferico)}:\\
+  Per un guscio sferico di raggio $R$ con densità superficiale $\sigma$ il campo interno è zero ($E_{\text{in}}=0$), mentre immediatamente all'esterno della superficie si ha
+  $$
+  E_{\text{out}}(R)=\frac{\sigma}{\varepsilon_0},
+  $$
+  quindi la componente perpendicolare presenta un salto da $0$ a $\sigma/\varepsilon_0$. La componente tangenziale è nulla poiché il campo è radiale.
+\end{itemize}
+
+\begin{figure}[h]    \centering
+\includegraphics[width=0.7\textwidth]{Immagini/Relazioni.png} 
+    \caption{Diagramma delle relazioni tra $\rho$, $V$ ed $\vec{E}$.}
+    \label{fig:relazioni} 
+\end{figure}
+
+
 
 \chapter{Lavoro ed energia elettrostatici}
 \section{Energia di un sistema discreto di cariche}
