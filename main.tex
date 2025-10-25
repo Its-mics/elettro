@@ -588,8 +588,59 @@ $$
 $$
 Ottenendo l'\textbf{Equazione di Laplace}.
 
-
 \section{Condizioni al contorno / Boundary conditions}
+Determiniamo proprietà generali per il campo elettrico quando si attraversa una superficie che porta una densità di carica superficiale.
+In un tipico problema elettrostatico viene fornita una distribuzione di carica sorgente $\rho$ e si desidera trovare il campo elettrico $\vec{E}$ che essa produce. A meno che la simmetria del problema non consenta una soluzione immediata tramite la legge di Gauss, è spesso conveniente calcolare prima il potenziale elettrico come passaggio intermedio.
+
+\begin{itemize}
+\item[\textbf{(1)}] \textbf{Componente normale (perpendicolare) -- discontinuità.}\\
+Supponiamo che la superficie abbia \textbf{spessore nullo}.
+Vogliamo capire cosa succede attraversando la superficie. Sappiamo che:
+$$
+\vec{\nabla}\cdot\vec{E}(\vec{r}) = \frac{\rho(\vec{r})}{\varepsilon_0},
+\qquad 
+\vec{\nabla}\times \vec{E} = 0.
+$$
+
+Consideriamo una \textbf{superficie gaussiana cilindrica} di altezza trascurabile ($h \to 0$). Poiché la regione è molto piccola, possiamo considerare $\vec{E}(\vec{r})$ costante. Si ha quindi:
+$$
+\oint \vec{E}\cdot \hat{n}\,dS 
+= \underbrace{\int_{S_{lat}}\vec{E}_l\cdot \hat{n}\,dS}_{\text{($h \sim 0$) $\to 0$}} 
++ \int_{S_{b1}}\vec{E}_1\cdot \hat{n}\,dS 
++ \int_{S_{b2}}\vec{E}_2\cdot \hat{n}\,dS 
+= \int_{S_{b1}}E_{\perp 1}\,dS - \int_{S_{b2}}E_{\perp 2}\,dS.
+$$
+Dove $S_{lat}$ è la superficie laterale del cilindro e $S_{b1}$, $S_{b2}$ le superfici di base. In uno dei due integrali compare un segno negativo perché il versore normale è opposto. Si ottiene quindi:
+$$
+E_1 S_b - E_2 S_b = \frac{Q}{\varepsilon_0} = \frac{\sigma S_b}{\varepsilon_0},
+$$
+e di conseguenza:
+$$
+E_{\perp 1} - E_{\perp 2} = \frac{\sigma}{\varepsilon_0}.
+$$
+Attraversando una qualsiasi superficie carica, la componente perpendicolare del campo elettrico presenta quindi una discontinuità pari a $\frac{\sigma}{\varepsilon_0}$.
+\\
+\\
+\item[\textbf{(2)}] \textbf{Componente tangenziale (parallela) -- continuità.}\\
+Per la componente parallela alla superficie, utilizziamo invece il fatto che il rotore del campo elettrico è nullo. 
+Consideriamo un percorso rettangolare (una superficie di Stokes) con i lati lunghi paralleli alla superficie e quelli corti perpendicolari, in modo da poter trascurare il loro contributo poiché $h \sim 0$. 
+Applicando la circuitazione del campo elettrico si ottiene:
+$$
+\oint \vec{E}\cdot d\vec{l} = 
+\int_{l_1}\vec{E}_1\cdot d\vec{l} + \int_{l_2}\vec{E}_2\cdot d\vec{l} 
+= \int_{l}E_{\parallel 1}\,dl - \int_{l}E_{\parallel 2}\,dl
+= E_{\parallel 1}l - E_{\parallel 2}l.
+$$
+Ne segue che attraversando una qualunque superficie carica, la componente parallela del campo elettrico non presenta discontinuità:
+$$
+E_{\parallel 1} - E_{\parallel 2} = 0 \quad \Rightarrow \quad E_{\parallel 1} = E_{\parallel 2}.
+$$
+\
+\end{itemize}
+
+\subsection*{Verifiche su casi noti}
+\begin{itemize}
+  \item \textbf{Piano infinito carico:}\\
   Per un piano infinito con densità superficiale $\sigma$ il campo è uniforme da entrambi i lati e si verifica
   $$
   \Delta E_{\perp} = \frac{\sigma}{\varepsilon_0}, \qquad \Delta E_{\parallel} = 0.
@@ -612,8 +663,6 @@ Ottenendo l'\textbf{Equazione di Laplace}.
     \caption{Diagramma delle relazioni tra $\rho$, $V$ ed $\vec{E}$.}
     \label{fig:relazioni} 
 \end{figure}
-
-
 
 \chapter{Lavoro ed energia elettrostatici}
 \section{Energia di un sistema discreto di cariche}
