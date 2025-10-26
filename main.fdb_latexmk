@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761435187.12517 "c:/Users/standard/Desktop/elettro/main.tex" "main.pdf" "main" 1761435189.64416 0
+["pdflatex"] 1761484944.43532 "c:/Users/standard/Desktop/elettro/main.tex" "main.pdf" "main" 1761484947.96965 0
   "C:/Program Files/MiKTeX/tex/generic/bigintcalc/bigintcalc.sty" 1576433602 40635 c40361e206be584d448876bba8a64a3b ""
   "C:/Program Files/MiKTeX/tex/generic/bitset/bitset.sty" 1575926576 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "C:/Program Files/MiKTeX/tex/generic/gettitlestring/gettitlestring.sty" 1576433666 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -198,11 +198,11 @@
   "C:/Users/standard/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/standard/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1700127522 55487 80a65caedd3722f4c20a14a69e785d8f ""
   "Immagini/Relazioni.png" 1761429682 68362 7f61b9d0a8af376b2d2b46d8e8745020 ""
-  "c:/Users/standard/Desktop/elettro/main.tex" 1761435185 47567 7bf0478ceb81b2f3ea83df663b48a998 ""
-  "main.aux" 1761435189 19102 ff2b96c97f203f4b2288e7e835f98121 "pdflatex"
-  "main.out" 1761435189 25041 48db24b3e49b00b252b4ee6fc3368931 "pdflatex"
-  "main.tex" 1761435185 47567 7bf0478ceb81b2f3ea83df663b48a998 ""
-  "main.toc" 1761435189 11794 12c69d0ba6fe35db53c4a47cd7866eb6 "pdflatex"
+  "c:/Users/standard/Desktop/elettro/main.tex" 1761484942 49498 8eb230c4b920b115f669fccb56c80430 ""
+  "main.aux" 1761484947 19350 06793f72955ff1004c74ad0b84ee53bd "pdflatex"
+  "main.out" 1761484947 25041 3a8f9fbda0bcc48010ceedaee35ae9a6 "pdflatex"
+  "main.tex" 1761484942 49498 8eb230c4b920b115f669fccb56c80430 ""
+  "main.toc" 1761484947 11960 c898250c39d473ba0b9d335b11872468 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

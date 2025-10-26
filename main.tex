@@ -664,7 +664,43 @@ $$
     \label{fig:relazioni} 
 \end{figure}
 
-\chapter{Lavoro ed energia elettrostatici}
+\chapter{Lavoro ed energia elettrostatica}
+
+Supponiamo di avere una configurazione stazionaria di cariche e di voler spostare una carica \(Q\) dal punto \(a\) al punto \(b\) (supponendo che lo spostamento non perturb i il campo elettrostatico). Quanto lavoro si compie? In ogni punto lungo il percorso la forza che agisce su \(Q\) è la forza elettrica \(\vec{F}_{\rm campo}=Q\vec{E}\); la forza che si esercita in opposizione a questa forza elettrica, quando un agente esterno muove la carica lentamente, è \(\vec{F}_{\rm ext}=-Q\vec{E}\) (analoga al sollevare un mattone: la gravità esercita una forza \(mg\) verso il basso, mentre chi solleva esercita una forza \(mg\) verso l'alto).
+
+La forza elettrostatica è conservativa, quindi il lavoro dipende solo dai punti iniziale e finale e non dal percorso.
+
+\paragraph{Lavoro compiuto dal campo}
+\[
+W_{\rm campo}=\int_{a}^{b}\vec{F}_{\rm campo}\cdot d\vec{l}
+=Q\int_{a}^{b}\vec{E}\cdot d\vec{l}
+=-Q\bigl[V(b)-V(a)\bigr]
+= -\Delta U,
+\]
+dove definiamo \(\Delta U=U(b)-U(a)\) come la variazione di energia potenziale elettrostatica.
+
+\paragraph{Lavoro compiuto dall'agente esterno (quasi-statico)} 
+\[
+W_{\rm ext}=\int_{a}^{b}\vec{F}_{\rm ext}\cdot d\vec{l}
+=-Q\int_{a}^{b}\vec{E}\cdot d\mathbf{l}
+=Q\bigl[V(b)-V(a)\bigr]=\Delta U.
+\]
+
+Quindi si trovano i seguenti risultati:
+
+\[
+\boxed{\Delta U = Q\bigl[V(b)-V(a)\bigr] \qquad\text{e}\qquad
+W_{\rm campo}=-\Delta U,\quad W_{\rm ext}=\Delta U.}
+\]
+\\
+Se scegliamo il riferimento del potenziale in modo che \(V(\infty)=0\), il lavoro necessario (dall'agente esterno) per portare la carica \(Q\)
+dall'infinito al punto \(\vec{r}\) è
+\[
+W_{\rm ext} = \Delta U = U(\vec{r})-U(\infty)=Q\bigl[V(\vec{r})-0\bigr]=Q\,V(\vec{r}).
+\]
+Si osserva che in questo caso il potenziale elettrico \(V\) è l'energia potenziale per unità di carica.
+
+Si osserva che in questo caso il potenziale elettrico \(V\) è l'energia potenziale per unità di carica.
 \section{Energia di un sistema discreto di cariche}
 \section{Energia di un sistema con distribuzione continua di carica}
 \section{Esempi}

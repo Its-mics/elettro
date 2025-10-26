@@ -24,7 +24,9 @@
 \contentsline {section}{\numberline {4.5}Esempi}{21}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Equazione di Poisson}{21}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Condizioni al contorno / Boundary conditions}{22}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Lavoro ed energia elettrostatici}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Lavoro ed energia elettrostatica}{25}{chapter.5}%
+\contentsline {paragraph}{Lavoro compiuto dal campo}{25}{section*.5}%
+\contentsline {paragraph}{Lavoro compiuto dall'agente esterno (quasi-statico)}{25}{section*.6}%
 \contentsline {section}{\numberline {5.1}Energia di un sistema discreto di cariche}{25}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Energia di un sistema con distribuzione continua di carica}{25}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Esempi}{25}{section.5.3}%
