@@ -31,13 +31,13 @@
 \contentsline {section}{\numberline {5.2}Energia di un sistema con distribuzione continua di carica}{26}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Esempi}{28}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Materiali conduttori e isolanti}{29}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Campo elettrico in un materiale conduttore}{29}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Capacit\`a e condensatori}{29}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Condensatore all'infinito}{29}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}Energia immagazzinata in un condensatore}{29}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Condensatore piano}{29}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Condensatore sferico}{29}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Condensatore cilindrico}{29}{section.6.6}%
+\contentsline {section}{\numberline {6.1}Campo elettrico in un materiale conduttore}{30}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Capacit\`a e condensatori}{30}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Condensatore all'infinito}{30}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Energia immagazzinata in un condensatore}{30}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Condensatore piano}{30}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Condensatore sferico}{30}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Condensatore cilindrico}{30}{section.6.6}%
 \contentsline {chapter}{\numberline {7}I dipoli elettrici}{31}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Potenziale e campo elettrico di dipolo}{31}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Momento di dipolo di un sistema}{31}{section.7.2}%

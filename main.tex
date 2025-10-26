@@ -846,16 +846,50 @@ Infine, una nota sul principio di sovrapposizione: poiché l'energia è quadrati
 \section{Esempi}
 
 \chapter{Materiali conduttori e isolanti}
-Quasi tutti i materiali inorganici sono cristallini: gli atomi sono disposti su un reticolo periodico. Tuttavia questi materiali non si comportano tutti allo stesso modo. Nel diamante gli elettroni sono fortemente legati ai propri atomi (con carica totale nulla all'esterno). Nel rame, invece, esistono elettroni delocalizzati — non si tratta di ionizzazione, ma di elettroni che occupano bande contagenti e possono spostarsi da un atomo all'altro; questi elettroni formano una specie di ``fluido'' mobile che porta corrente e carica nel materiale.
+
+Quasi tutti i materiali inorganici sono cristallini: gli atomi sono disposti su un reticolo periodico. Tuttavia questi materiali non si comportano tutti allo stesso modo. Nel diamante gli elettroni sono fortemente legati ai propri atomi (con carica totale nulla all'esterno). Nel rame, invece, esistono elettroni delocalizzati — non si tratta di ionizzazione, ma di elettroni che occupano bande contigue e possono spostarsi da un atomo all'altro; questi elettroni formano una specie di ``fluido'' mobile che porta corrente e carica nel materiale.
+
 Possiamo quindi distinguere, in prima approssimazione, due tipi di materiale:
 \begin{itemize}
   \item \textbf{Isolanti} (o dielettrici): gli elettroni rimangono legati agli stessi atomi e non vi sono portatori liberi in grado di muoversi su scala macroscopica.
   \item \textbf{Conduttori}: una parte degli elettroni è libera di muoversi tra gli atomi e quindi può sostenere correnti macroscopiche.
 \end{itemize}
-Vedremo più avanti che questi comportamenti si rappresentano convenientemente introducendo due densità di carica: \(\rho_b\) (bound — carica legata) e \(\rho_f\) (free — carica libera).
-D'ora in avanti chiameremo \textbf{campi di stimolo} i campi applicati dall'esterno al sistema, e \textbf{campi di risposta} i campi generati dal moto delle cariche (in particolare dal moto degli elettroni) in risposta al campo di stimolo.
+
+Vedremo più avanti che questi comportamenti si rappresentano convenientemente introducendo due densità di carica: $\rho_b$ (\emph{bound} — carica legata) e $\rho_f$ (\emph{free} — carica libera). D'ora in avanti chiameremo \textbf{campi di stimolo} i campi applicati dall'esterno al sistema, e \textbf{campi di risposta} i campi generati dal moto delle cariche (in particolare dal moto degli elettroni) in risposta al campo di stimolo.
+
 Quando gli elettroni sono liberi di muoversi, il campo di stimolo esercita su di essi una forza che li sposta: questo spostamento costituisce una corrente elettrica, cioè uno spostamento macroscopico di carica.
-A grandi linee, e a livello atomico, ciò che succede in presenza di un campo di stimolo è quanto segue. Il campo esterno provoca uno spostamento relativo tra il nucleo e la nube elettronica di ciascun atomo; questo crea un dipolo elettrico, che produce un campo elettrico (effetto microscopico). Tale effetto è presente sia nei dielettrici sia nei conduttori, ma con esiti diversi: nei dielettrici lo spostamento è limitato, mentre nei conduttori il moto degli elettroni può risultare in una corrente macroscopica (effetto macroscopico).
+
+A grandi linee, e a livello atomico, ciò che succede in presenza di un campo di stimolo è il seguente. Il campo esterno provoca uno spostamento relativo tra il nucleo e la nube elettronica di ciascun atomo; questo crea un dipolo elettrico che produce un campo elettrico (effetto microscopico). Tale effetto è presente sia nei dielettrici sia nei conduttori, ma con esiti diversi: nei dielettrici lo spostamento è limitato, mentre nei conduttori il moto degli elettroni può risultare in una corrente macroscopica (effetto macroscopico).
+
+\section*{Struttura elettronica e densità di carica}
+
+Si distinguono, a livello atomico, i seguenti insiemi di elettroni:
+\begin{itemize}
+  \item \textbf{Elettroni di valenza}: sono gli elettroni più esterni; partecipano ai legami chimici e, quando delocalizzati, sono i principali responsabili della conduzione elettrica.
+  \item \textbf{Elettroni di core}: sono più vicini al nucleo e fortemente legati.
+\end{itemize}
+
+Il nucleo atomico porta una carica positiva che, in prima approssimazione puntiforme, si può rappresentare con la delta di Dirac:
+\[
+\rho_{\mathrm{nucleo}}(\vec{r}) = Z e\,\delta(\vec{r}),
+\]
+dove $Z$ è il numero atomico ed $e>0$ è il modulo della carica dell'elettrone. Tuttavia, a causa della presenza degli elettroni di core che schermano parzialmente la carica del nucleo, gli elettroni di valenza percepiscono spesso una carica nucleare efficace $\tilde{Z}e$: in molte semplificazioni si può dunque scrivere
+\[
+\rho_{\mathrm{eff}}(\vec{r}) = \tilde{Z}e\,\delta(\vec{r}),
+\]
+intesa come carica positiva concentrata in prossimità del centro atomico dopo aver tenuto conto della schermatura degli elettroni interni.
+
+Un'altra approssimazione spesso usata per modellare qualitativamente un atomo è quella della \emph{sfera atomica}: si approssima la nube elettronica esterna come una distribuzione negativa uniforme (o comunque distribuita su una regione di raggio $r$) che neutralizza la carica positiva centrale. Se la carica totale della nube di valenza ha modulo $\tilde{Z}e$ e occupa un volume atomico $V_{\mathrm{atom}}=\tfrac{4}{3}\pi r^3$, la densità volumetrica della nube elettronica può essere approssimata come
+\[
+\rho_{e}(\vec{r}) \simeq -\frac{\tilde{Z}e}{V_{\mathrm{atom}}} = -\frac{\tilde{Z}e}{\tfrac{4}{3}\pi r^3}
+\]
+
+Nel contesto dei materiali solidi conviene tenere presente le seguenti considerazioni:
+
+\begin{itemize}
+  \item Se gli elettroni di valenza possono spostarsi liberamente da un punto all'altro del materiale, essi costituiscono \emph{portatori di carica} e la loro densità contribuisce a $\rho_f$: il materiale è un conduttore o semimetallo.
+  \item Se gli elettroni di valenza sono localizzati sull'atomo e non partecipano al trasporto macroscopico, la loro carica è considerata \emph{legata} e contribuisce a $\rho_b$: il materiale si comporta come un isolante (o dielettrico).
+\end{itemize}
 
 
 \section{Campo elettrico in un materiale conduttore}
