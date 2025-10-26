@@ -701,8 +701,147 @@ W_{\rm ext} = \Delta U = U(\vec{r})-U(\infty)=Q\bigl[V(\vec{r})-0\bigr]=Q\,V(\ve
 Si osserva che in questo caso il potenziale elettrico \(V\) è l'energia potenziale per unità di carica.
 
 Si osserva che in questo caso il potenziale elettrico \(V\) è l'energia potenziale per unità di carica.
+
 \section{Energia di un sistema discreto di cariche}
+Supponiamo di avere un sistema di cariche puntiformi, 
+immaginando di portare le cariche, una alla volta, da lontano, La prima carica, $q_1$, non richiede lavoro, poiché non c'è ancora un campo da contrastare. portando $q_2$ avremo che il lavoro di $q_2$ sarà: 
+$$
+W_2 = \int_{\infty}^{|\vec{r_2}-\vec{r_1}|} \frac{q_1q_2}{4\pi   \varepsilon_0} \frac{(\vec{r_2}-\vec{r_1})}{|\vec{r_2}-\vec{r_1}|^2} \cdot d\vec{l_2}
+= \frac{q_1q_2}{4\pi   \varepsilon_0} \frac{1}{|\vec{r_2}-\vec{r_1}|}
+$$
+Si nota un importante differenza rispetto al caso gravitazionale, qua il lavoro può essere positivo  o negativo, dipende acnhe dal segno delle cariche:
+
+\begin{itemize}
+    \item + e -: si attraggono per cui il lavoro fatto dal campo è negativo 
+    \item + e + (o - e -) per cui per avvicinarle dobbiamo fornire energia, il sistema accumulerà energia potenziale e se non le tengo ferme le cariche tenderenno ad allontanarsi, il lavoro del campo è positivo mentre il lavoro esterno fatto sul sistema sarà negativo e quindi si dovrrà fornire un energia positiva.
+\end{itemize}
+Aggiungendo una terza carica si trova: 
+$$
+W_3=  \frac{1}{4\pi   \varepsilon_0} \left( \frac{q_3 q_2}{|\vec{r_3}-\vec{r_2}|} + \frac{q_3 q_1}{|\vec{r_3}-\vec{r_1}|} \right)
+$$
+di conseguenza aggiungendo una quarta carica si trova: 
+$$
+W_3=  \frac{1}{4\pi   \varepsilon_0} \left( \frac{q_4 q_3}{|\vec{r_4}-\vec{r_3}|} + \frac{q_4 q_2}{|\vec{r_4}-\vec{r_2}|} + \frac{q_4 q_1}{|\vec{r_4}-\vec{r_1}|}  \right)
+$$
+Si può quindi trovare la regola generale, considerando il lavoro complessivo per spostare tutte le cariche da distanza infinita alla loro posizione finale trovando:
+$$
+W= \frac{1}{4\pi   \varepsilon_0} \sum_{i=1}^{N} \sum_{j>i}^{N}\frac{q_i q_j}{|\vec{r_i}-\vec{r_j}|}
+$$
+si mette $j > i$ altrimenti conteremmo la stessa coppia 2 volte, possiamo riscrivere la seguente come:
+
+\[
+W = \frac{1}{8\pi\varepsilon_0}\sum_{i=1}^n\sum_{\substack{j=1\\ j\neq i}}^n \frac{q_i q_j}{r_{ij}}.
+\]
+ Si noti che in questa forma il risultato non dipende dall'\emph{ordine} con cui si assemblano le cariche, poiché ogni coppia compare nella somma.
+ Infine, estraiamo il fattore \(q_i\):
+\[
+W = \frac{1}{2}\sum_{i=1}^n q_i\!\left(\sum_{\substack{j=1\\ j\neq i}}^n \frac{1}{4\pi\varepsilon_0}\frac{q_j}{r_{ij}}\right).
+\]
+ Il termine fra parentesi è il potenziale nel punto \(\vec{r}_i\) (la posizione di \(q_i\)) dovuto a tutte le altre cariche (apparte $q_i$) .Pertanto:
+\[
+W = \frac{1}{2}\sum_{i=1}^n q_i\,V(\vec{r}_i).
+\]
+Questo è il lavoro  necessario per assemblare una configurazione di cazzi puntiformi e rappresenta anche l'energia immagazzinata nella configurazione del sistema.
+
+
 \section{Energia di un sistema con distribuzione continua di carica}
+
+Estendiamo il risultato precedente considerando elementi infinitesimi di carica e integrando sulla distribuzione continua. Per la configurazione considerata si ha
+\[
+W \;=\; \tfrac{1}{2}\int V(\vec r)\,dq
+\;=\; \tfrac{1}{2}\int_{\mathcal V} \rho(\vec r)\,V(\vec r)\,dV,
+\]
+dove \(\rho(\vec r)\) è la densità di carica e \(\mathcal V\) è un volume che contiene le cariche. Usando la legge di Gauss \(\nabla\cdot\vec E=\rho/\varepsilon_0\) otteniamo
+\[
+W \;=\; \tfrac{1}{2}\varepsilon_0 \int_{\mathcal V} V(\vec r)\,\bigl(\nabla\cdot\vec E(\vec r)\bigr)\,dV.
+\]
+
+Applichiamo ora l'identità vettoriale
+\[
+\nabla\cdot\bigl(V\vec E\bigr) \;=\; V\,(\nabla\cdot\vec E) + \vec E\cdot\nabla V.
+\]
+Da ciò segue
+\[
+V\,(\nabla\cdot\vec E) \;=\; \nabla\cdot\bigl(V\vec E\bigr) - \vec E\cdot\nabla V.
+\]
+Poiché \(\nabla V = -\vec E\), abbiamo \(\vec E\cdot\nabla V = \vec E\cdot(-\vec E) = -\vec E\cdot\vec E\). Sostituendo nell'integrale otteniamo
+\[
+\begin{aligned}
+W
+&= \tfrac{1}{2}\varepsilon_0 \int_{\mathcal V} \Bigl[ \nabla\cdot\bigl(V\vec E\bigr) - \vec E\cdot\nabla V \Bigr] dV \\
+&= \tfrac{1}{2}\varepsilon_0 \int_{\mathcal V} \nabla\cdot\bigl(V\vec E\bigr)\,dV \;+\; \tfrac{1}{2}\varepsilon_0 \int_{\mathcal V} \vec E\cdot\vec E\,dV.
+\end{aligned}
+\]
+Applicando il teorema della divergenza al primo termine:
+\[
+W \;=\; \tfrac{1}{2}\varepsilon_0 \oint_{S_{\mathcal V}} V(\vec r)\,\vec E(\vec r)\cdot\hat n\,dS
+\;+\; \tfrac{1}{2}\varepsilon_0 \int_{\mathcal V} \vec E(\vec r)\cdot\vec E(\vec r)\,dV.
+\]
+
+
+
+\subsection*{Osservazioni sulla scelta del volume di integrazione}
+
+Abbiamo ottenuto la relazione
+\[
+W \;=\; \frac{\varepsilon_0}{2}\int_{\mathcal V} V(\vec r)\,\bigl(\vec{\nabla}\cdot\vec E(\vec r)\bigr)\,d\mathcal V
+\;=\; \frac{\varepsilon_0}{2}\oint_{S_{\mathcal V}} V(\vec r)\,\vec E(\vec r)\cdot\hat n\,dS
+\;+\; \frac{\varepsilon_0}{2}\int_{\mathcal V} \vec E(\vec r)\cdot\vec E(\vec r)\,d\mathcal V.
+\]
+Questa è esatta per ogni volume \(\mathcal V\) che contenga l'intera distribuzione di carica considerata. Di conseguenza:
+
+\begin{itemize}
+\item Se si sceglie di integrare su un volume \(\mathcal V\) più grande che contiene comunque tutte le cariche, l'integrale di volume \(\int_{\mathcal V}\vec E^2\,d\mathcal V\) cresce (poiché l'integrando è positivo), ma il termine di superficie \(\oint_{S_{\mathcal V}} V\,\vec E\cdot\hat n\,dS\) diminuisce in maniera tale che la somma o $U_e$ rimanga invariata: quindi il valore di \(W\) non dipende dalla scelta del volume finché esso contiene tutta la carica e si include il relativo termine di superficie.
+\item Per sorgenti localizzate (cioè quando tutta la carica è contenuta in una regione finita), è utile estendere \(\mathcal V\) a tutto lo spazio (e quindi all'infinito). Per grandi raggi \(r\) abbiamo:
+  \[
+  |\vec E|\sim \frac{1}{r^2},\qquad V\sim\frac{1}{r},\qquad |S|\sim r^2,
+  \]
+  quindi il contributo superficiale si stima come
+  \[
+  \oint_{S} V\,\vec E\cdot\hat n\,dS \;\sim\; V \,|\vec E|\,|S| \;\propto\; \frac{1}{r}\;\longrightarrow\; 0
+  \quad\text{per }r\to\infty.
+  \]
+ In tale limite il termine di superficie si annulla e resta la forma puramente sul campo.
+\end{itemize}
+
+Se si estende l'integrazione a tutto lo spazio e si suppone che il campo e il potenziale decadano abbastanza rapidamente all'infinito (in modo che il termine di superficie vada a zero), si ricava:
+\[
+\boxed{\,W = U_e = \frac{\varepsilon_0}{2}\int_{\mathcal{V}}\vec E^2(\vec r)\,dV}
+\]
+
+\subsection*{Densità di energia}
+
+Definiamo una nuova quantità la densità di energia elettrica:
+\[
+u_e(\vec r)\;\equiv\; \frac{\varepsilon_0}{2}\,\vec E^2(\vec r)
+\qquad\text{cosicché}\qquad
+U_e=\int_{\mathcal{V}}u_e(\vec r)\,dV.
+\]
+Questa definizione è valida anche fuori dal regime puramente elettrostatico.
+
+\subsection*{Equivalenza delle formulazioni (discreto vs continuo)} 
+
+Le due espressioni sono equivalenti a condizione di trattare con attenzione i contributi che, nel caso ideale delle cariche puntiformi, diventano infiniti. In particolare:
+\begin{itemize}
+\item Se la distribuzione di carica è regolare (non contiene cariche ideali puntiformi) le due formule
+\[
+\frac{1}{2}\int \rho(\vec r)\,V(\vec r)\,d\mathcal V
+\qquad\text{e}\qquad
+\frac{\varepsilon_0}{2}\int \vec E(\vec r)\cdot\vec E(\vec r)\,d\mathcal V
+\]
+danno lo stesso risultato finito.
+\item Se la carica è puntiforme, la seconda formula
+\[
+\frac{\varepsilon_0}{2}\int \vec E(\vec r)\cdot\vec E(\vec r)\,d\mathcal V
+\]
+diverge perché il campo \(\vec E(\vec r)\) cresce senza limite nelle regioni molto vicine alla carica. Questo riflette il fatto che, idealizzando la carica come concentrata in un punto, l'energia richiesta per "costruirla" risulta infinita. Nella formulazione discreta per \(N\) cariche puntiformi si evita questa divergenza.
+\end{itemize}
+
+\subsection*{Principio di sovrapposizione}
+
+Infine, una nota sul principio di sovrapposizione: poiché l'energia è quadratica nel campo, l'energia totale di due sistemi non è semplicemente la somma delle energie prese singolarmente.
+
+
 \section{Esempi}
 
 \chapter{Materiali conduttori e isolanti}
