@@ -8,11 +8,12 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{tikz} % QUesto è per i Grafici 
+\usepackage{siunitx}
 
 \usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
 
 
-\title{ELETTROMAGNETISMO: piselli, radiazioni e cazzi}
+\title{ELETTROMAGNETISMO: piselli, erezioni e cazzi}
 \author{NicoNico (PipoPipo), Michele Pisellini (michigay)}
 \date{A.A. 2025/2026}
 
@@ -1140,9 +1141,188 @@ nel dominio considerato (regione esterna ai conduttori e interna alla gabbia), s
 
 
 \chapter{Interazioni e campi di risposta}
-\section{Interazione carica-carica indotta}
-\subsection{Caso limite}
-\subsection{Applicazione}
+\section{Interazione carica--carica indotta}
+
+
+Consideriamo una sfera conduttrice di raggio $r_0$, collegata a terra, e una carica puntiforme immobile $q$ posta sull'asse a distanza $r$ dal centro della sfera. Vogliamo determinare il campo elettrico in un generico punto esterno $P$ e la forza che agisce su $q$ a causa dell'induzione sulla sfera.
+
+All'interno di un conduttore in equilibrio elettrostatico il campo elettrico è nullo e, poiché la sfera è collegata a terra, il suo potenziale è $V=0$. La presenza di $q$ induce sulla sfera una distribuzione di carica superficiale che rende il potenziale costante (nullo) sulla superficie.
+
+Per il problema della sfera conduttrice collegata a terra si può usare il \emph{metodo delle cariche immagine}: la regione esterna alla sfera è equivalente al campo prodotto dalla carica reale $q$ e da una carica immagine.  
+La \emph{carica immagine} non è una carica fisica ma un artificio matematico: si introduce una carica fittizia (con ampiezza e posizione scelte opportunamente) in modo che la somma dei campi di $q$ e dell'immagine riproduca esattamente il campo reale nella regione esterna e soddisfi la condizione al contorno $V=0$ sulla superficie. Per il teorema di unicità della soluzione di Dirichlet, la soluzione così costruita è la soluzione fisica nella regione esterna. Fisicamente, l'immagine rappresenta in modo equivalente la distribuzione di carica indotta sulla superficie della sfera, ma non corrisponde a una sorgente reale nello spazio libero.
+
+Eguagliando i potenziali sulla superficie della sfera si trova che l'immagine è una carica puntiforme
+$$
+\frac{q}{4\pi\varepsilon_0 r} + \frac{q'}{4\pi\varepsilon_0 r_0}  = 0 
+$$
+
+\[
+q'=-q\frac{r_0}{r},\qquad r'=\frac{r_0^2}{r},
+\]
+posta sull'asse nella stessa direzione di $q$ ma all'interno della sfera, a distanza $r'$ dal centro. Quindi, nella regione esterna tutto si comporta come se ci fossero la carica reale $q$ e la carica immagine $q'$ puntiforme posta a distanza $r_0^2/r$ dal centro nella direzione della carica stimolante.
+
+Per verificarlo si può calcolare il potenziale in un generico punto esterno di coordinate $(r',\theta)$ (con $r'>r_0$) e usare il principio di sovrapposizione:
+\[
+V(\vec{ r'}) = \frac{q}{4\pi\varepsilon_0}\frac{1}{\sqrt{r'^{2}+r^{2}-2r'r\cos\theta}}
++\frac{q'}{4\pi\varepsilon_0}\frac{1}{\sqrt{r'^{2}+\left(\dfrac{r_0^{2}}{r}\right)^{2}-2r'\dfrac{r_0^{2}}{r}\cos\theta}}.
+\]
+Sostituendo $q'=-q r_0/r$ si ottiene
+\[
+V(\vec{ r'}) = \frac{q}{4\pi\varepsilon_0}\left(
+\frac{1}{\sqrt{r'^{2}+r^{2}-2r'r\cos\theta}}
+- \frac{r_0/r}{\sqrt{r'^{2}+\dfrac{r_0^{4}}{r^{2}}-2r'\dfrac{r_0^{2}}{r}\cos\theta}}
+\right).
+\]
+che può essere riscritto come:
+\[
+V(\vec{r}\,') =
+\frac{q}{4\pi\varepsilon_0}
+\left(
+\frac{1}{\sqrt{r'^{2} + r^{2} - 2\,r'\,r\cos\theta}}
+-
+\frac{1}{\sqrt{r'^{2}\frac{r^{2}}{r_0^{2}} + r_{0}^{2} - 2\,r'\,r\cos\theta}}
+\right)
+\]
+
+Si verifica che questa espressione soddisfa le condizioni di Dirichlet richieste:
+\begin{itemize}
+  \item per $r'\to\infty$ si ha $V(\vec{r'})\to 0$;
+  \item per $r'=r_0$ (sulla superficie) si ottiene $V(\vec{ r'})=0$.
+\end{itemize}
+Per il teorema di unicità, la soluzione così costruita è dunque la soluzione fisica nella regione esterna.
+
+Possiamo ora calcolare la forza agente sulla carica $q$. La forza è la forza coulombiana dovuta al campo generato dalla carica immagine $q'$ (la carica reale non esercita forza su se stessa). La distanza tra $q$ e $q'$ è
+\[
+\Delta = r - r' = r - \frac{r_0^2}{r} = \frac{r^2-r_0^2}{r}.
+\]
+Applicando la legge di Coulomb e ricordando $q'=-q r_0/r$, l'intensità della forza radiale (attrattiva) è
+\[
+F(r) = q\cdot \frac{1}{4\pi\varepsilon_0}\frac{q'}{\Delta^{2}}
+= -\frac{q^{2}r_{0}r}{4\pi\varepsilon_{0}(r^{2}-r_{0}^{2})^{2}}.
+\]
+
+L'energia potenziale di interazione $U(r)$ (assunta nulla a distanza infinita) si ottiene integrando la forza:
+\[
+U(r) = -\int_{\infty}^{r} F(s)\,\mathrm{d}s.
+\]
+Poiché
+\[
+F(s) = -\frac{q^{2}r_{0}s}{4\pi\varepsilon_{0}(s^{2}-r_0^{2})^{2}},
+\]
+si usa la derivata
+\[
+\frac{\mathrm{d}}{\mathrm{d}s}\!\left(\frac{1}{s^{2}-r_0^{2}}\right) = -\frac{2s}{(s^{2}-r_0^{2})^{2}},
+\]
+e si ottiene
+\[
+U(r) = -\frac{q^{2}r_{0}}{8\pi\varepsilon_{0}(r^{2}-r_{0}^{2})}.
+\]
+
+Il potenziale di risposta nel punto occupato da $q$ (il potenziale dovuto alle cariche indotte) è
+\[
+V_{R}(r)=\frac{q'}{4\pi\varepsilon_0\Delta} = -\frac{q r_0}{4\pi\varepsilon_0 (r^{2}-r_0^{2})}.
+\]
+Ne segue la relazione
+\[
+U(r) = \frac{1}{2}\, q\,V_{R}(r),
+\]
+cioè l'energia non è semplicemente $qV_R$ ma la metà. Questo fattore $\tfrac12$ compare perché la distribuzione di carica indotta dipende linearmente da $q$ e si forma progressivamente: all'infinito $q'\to 0$, mentre avvicinandosi $q'$ cresce (in modulo). 
+\subsection{Caso limite $r \to r_0$}
+
+Ponendo $z=r-r_0\ll r_0$ (distanza dalla superficie) si ha
+\[
+r'=\frac{r_0^{2}}{r}=\frac{r_0^{2}}{r_0+z}\simeq r_0 - z + O\!\left(\frac{z^{2}}{r_0}\right),
+\]
+e
+\[
+q'=-q\frac{r_0}{r}\simeq -q\Big(1-\frac{z}{r_0}\Big)\simeq -q.
+\]
+
+Questo è Un comportamento riconducibile ai dipoli, a metà tra le cariche nel piano equatoriale ho una superficie equipotenziale. Quando $r\simeq r_0$ la sfera "diventa un piano" che diventa per l'appunto il piano equatoriale di un dipolo.
+La separazione fra $q$ e la sua immagine vale approssimativamente $\Delta\simeq 2z$ e la forza si riduce alla forza tra due cariche opposte quasi uguali separate da $2z$:
+\[
+F(z)\simeq -\frac{q^{2}}{16\pi\varepsilon_0 z^{2}},
+\]
+mentre l'energia potenziale, per $z\ll r_0$, vale
+\[
+U(z)\simeq -\frac{q^{2}}{16\pi\varepsilon_0 z}.
+\]
+
+\subsection{Applicazione: estrazione di un elettrone da un metallo}
+
+Consideriamo un elettrone (carica $-e$) che si allontana dalla superficie di un metallo. A distanza $z$ dalla superficie l'elettrone è attratto dalla sua immagine e, a distanze maggiori di pochi \AA, l'energia potenziale è approssimata da
+\[
+U(z)\simeq -\frac{e^{2}}{16\pi\varepsilon_0 z}.
+\]
+Se si prolungasse questa legge fino a $z=0$ si otterrebbe un'energia cinetica (necessaria per fare uscire l'elettrone) infinita; nella realtà, però, per distanze dell'ordine della distanza interatomica $a$ (di alcuni \AA) il modello classico non è più valido e l'energia potenziale si raccorda con l'energia di estrazione del metallo (work function) $W_F$. Per $z\lesssim a$ si assume un valore approssimativo $U\simeq -W_F$. Imponendo il raccordo formale
+\[
+-\frac{e^{2}}{16\pi\varepsilon_0 a} = -W_F
+\]
+si ricava la distanza caratteristica di raccordo
+\[
+a = \frac{e^{2}}{16\pi\varepsilon_0 W_F}.
+\]
+Qui $W_F$ è tipicamente dell'ordine di pochi eV (1\,eV \(\simeq\) \SI{1.602e-19}{J}).
+
+\section{Carica superficiale indotta — Esercizio}
+Vogliamo capire come è fatta la distribuzione di carica sulla superficie di un piano conduttore davanti al quale mettiamo una carica puntiforme.
+\\
+Prendiamo un piano conduttore; sul lato opposto (il vuoto) poniamo una carica puntiforme \(q\) a distanza \(z_0\) dal piano e adesso calcoliamo la distribuzione di carica indotta sulla superficie del conduttore.
+\\
+Ricordando la relazione che lega la densità superficiale di carica alla componente normale del campo elettrico appena fuori dal conduttore:
+\[
+\sigma=\varepsilon_0 E_n,
+\]
+dove \(E_n\) è la componente normale (alla superficie) del campo appena all'esterno (mentre all'interno del conduttore ci ricordiamo che il campo è nullo).
+\\
+\\
+Ora per trovare \(E_n\) usiamo il metodo delle immagini: sostituiamo il piano conduttore con una carica immagine \(-q\) posta simmetricamente a distanza \(z_0\) dall'altro lato del piano. Consideriamo un punto sulla superficie a distanza radiale \(R\) dall'asse (coordinate cilindriche). La distanza di quel punto dalla carica reale (o dall'immagine) è:
+\[
+r=\sqrt{R^2+z_0^2}.
+\]
+Quindi la componente \(z\) (normale) del campo dovuta alla carica reale \(q\) in quel punto vale:
+\[
+E_z^{(q)}=\frac{q}{4\pi\varepsilon_0 r^2}\cdot\frac{z_0}{r}
+=\frac{q\,z_0}{4\pi\varepsilon_0\,(R^2+z_0^2)^{3/2}}.
+\]
+(dove la prima frazione è il modulo del campo radiale e la seconda fornisce la proiezione sull'asse z quindi il loro prodotto è il modulo della componente normale di $\Vec{E}$.)
+Adesso per trovarci il campo totale sappiamo che la carica immagine \(-q\) fornisce una componente \(z\) di uguale modulo e con segno tale che, subito fuori dal piano, le due componenti normali si sommano: il risultato è quindi il doppio della componente normale. Quindi la componente normale totale subito fuori dal piano è:
+\[
+E_n = -2\frac{q\,z_0}{4\pi\varepsilon_0\,(R^2+z_0^2)^{3/2}}
+\]
+dove il segno negativo indica che, per \(q>0\), il campo punta verso il conduttore (cioè verso il basso).
+Da ciò otteniamo la densità superficiale indotta:
+\[
+\sigma(R)=\varepsilon_0 E_n = -\,\frac{q\,z_0}{2\pi\,(R^2+z_0^2)^{3/2}}.
+\]
+
+Facciamo delle osservazioni:*-
+\begin{itemize}
+  \item \(\sigma(R)\) ha simmetria cilindrica rispetto all'asse passante per la carica.
+  \item \(|\sigma(R)|\) è massima per \(R=0\) e tende a \(0\) per \(R\to\infty\). Infatti
+  \[
+  |\sigma_{\max}|=\left|\sigma(0)\right|=\frac{q}{2\pi z_0^2}.
+  \]
+  \item Se \(q>0\), allora \(\sigma(R)<0\) per ogni \(R\): la \emph{carica di polarizzazione} è negativa (ossia di segno opposto a \(q\)), come mostra il segno negativo nella formula.
+
+\end{itemize}
+Verifichiamo la carica totale indotta (sul piano): integriamo \(\sigma(R)\) su tutto il piano usando corone circolari (con elemento di area \(dA=R\,dR\,d\theta\)):
+\[
+Q=\int_{0}^{2\pi}\!\int_{0}^{\infty}\sigma(R)\,R\,dR\,d\theta
+=2\pi\int_{0}^{\infty}\left(-\frac{q\,z_0}{2\pi\,(R^2+z_0^2)^{3/2}}\right)R\,dR.
+\]
+Semplificando:
+\[
+Q = -q z_0 \int_{0}^{\infty}\frac{R}{(R^2+z_0^2)^{3/2}}\,dR.
+\]
+Effettuiamo il cambio di variabile \(u=R^2+z_0^2\), \(du=2R\,dR\) (\(R\,dR=\tfrac{1}{2}du\)); i limiti vanno da \(u=z_0^2\) a \(u\to\infty\):
+\[
+Q = -\frac{q z_0}{2}\int_{z_0^2}^{\infty} u^{-3/2}\,du
+= -\frac{q z_0}{2}\left[-2u^{-1/2}\right]_{z_0^2}^{\infty}
+= -\frac{q z_0}{2}\left(0 - \left(-\frac{2}{z_0}\right)\right) = -q.
+\]
+Quindi la carica totale indotta sul piano è \(-q\), come ci si aspettava.
+
 \section{Interazione carica-dipolo indotto}
 \subsection{In generale}
 \section{Sfere con distribuzione di carica opposta}
