@@ -12,7 +12,7 @@
 \usepackage{dutchcal}
 \usepackage{bm}
 
-\usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
+\usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing, patterns}
 
 
 \title{ELETTROMAGNETISMO: piselli, erezioni e cazzi}
@@ -919,6 +919,14 @@ Le proprietà più importanti per un conduttore sono le seguenti:
 Analizziamo il caso di un guscio sferico conduttore al cui all'interno vi è una carica di stimolo $q$, il campo, internamente deve essere nulla, quindi
 la carica ridistribuitosi con densità $\sigma$ sulla deve essere pari a $-q$, d'altra parte all'esterno del conduttore noteremo la presenza di questa carica interna,
 poichè un altra ridistribuzione di cariche avviene sulla superfice esterna del conduttore, per contrastare quella interna. 
+
+\begin{center}
+  \begin{tikzpicture}[scale=1.5, >=Stealth]
+    \draw[thick, pattern=north east lines] (0,0) circle (2cm);
+    \draw[thick, fill=white] (0,0) circle (1.7cm);
+    \draw[<->, dashed] (0,0) -- (1.65,0) node[midway,above] {$R$};
+  \end{tikzpicture}
+\end{center}
 \subsubsection{Carica non centrata}
 Immaginiamo di avere una sfera conduttrice con all'interno una\' cavità di qualsiasi forma, al cui interno vi è una carica. In questo caso avremo
 \begin{itemize}
@@ -930,6 +938,18 @@ Ci potremmo chiedere come ciò sia possibile (ci potremmo aspettare una ridistri
 tale che esso cancella la carica interna, permettendo la ridistribuzione uniforme.
 
 Ovviamente, ciò vale anche per una carica esterna, a parti invertite (la ridistribuzione non uniforme si ha sulla superfice esterna).
+
+\begin{center}
+
+  \begin{tikzpicture}[scale=1.5, >=Stealth]
+    \draw[thick, fill=lightgray!30] (0,0) circle (2cm);
+    \draw[thick, fill=white] (0.5,0.2) .. controls (0.8,0.8) and (0.6,1.2) .. (0,1) 
+                            .. controls (-0.6,0.8) and (-0.4,0.4) .. (-0.2,-0.3)
+                            .. controls (0.1,-0.6) and (0.4,-0.4) .. (0.5,0.2);
+    \node[circle, fill=black, inner sep=2pt] at (0.2,0.5) {};
+    \node at (0.4,0.5) {$Q$};
+  \end{tikzpicture}
+\end{center}
 \subsection{Gabbia di Faraday}
 Vediamo infine il caso di una cavità senza all'interno cariche. In questo caso osserviamo subito che al suo interno non vi deve essere campo, poichè $\oint_\gamma \vec{E} dl=0$,
 se avessimo un campo all'interno della cavità e prendessimo un percorso chiuso passante per essa, ma che si chiude all'interno del conduttore, otterremo un risultato diverso.
@@ -937,13 +957,122 @@ Tale principio è detto il principio della \textbf{gabbia di Faraday}
 \section{Capacit\`a e condensatori}
 Supponiamo di avere due conduttori di carica $+Q$ e $-Q$, poichè il $V$ è costante sulle superfici possiamo trattarne la differenza:
 \[
-\Delta V = V^+ -V^- = \int_{-}^{+} \vec{E} dl
+\Delta V = V = V = V^+ -V^- = \int_{-}^{+} \vec{E} dl
+\]
+Tale potenziale risulta essere proporzionale a $Q$, la cosatnte di proporzionalità viene detta \textbf{capacità} e scriveremo:
+\[
+C=\frac{Q}{V}
+\]
+la sua unità di misura è il farad ($[C]=F$). Notiamo che dalla definizione $C$ risulta sempre una quantità positiva.
+
+Per \textit{caricare} un condensatore dovremmo togliere elettroni dal conduttore a potenziela positivo e depositarli su quello negativo,
+supponendo di essere ad un potenziale $V=\frac{q}{C}$, il lavoro compiuto per fare ciò risulta:
+\[
+dL = dq V(\vec{r})= dq (\frac{q}{C}) \rightarrow L = \int_{0}^{Q}\frac{q}{C}dq =\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}CV^2
 \]
 \subsection{Condensatore all'infinito}
 \section{Energia immagazzinata in un condensatore}
-\section{Condensatore piano}
-\section{Condensatore sferico}
-\section{Condensatore cilindrico}
+\section{Esempi}
+\subsection{Condensatore piano}
+Per prima cosa dobbiamo suppore di far diminuire di molto la distaza $d$ fra le due lastre metalliche, alla chiusura dell'interruttore il potenziale aumenta verso la lastra positiva.
+Si ha un campo generatosi fra le lastre di valore:
+\[
+\displaystyle \vec{E}(\vec{r})=E = \hspace{- 0.8cm}\underset{\substack{\downarrow \\ \text{supponendo } A \gg d}}{\frac{\sigma}{\varepsilon_0}} \hspace{- 0.8cm} \rightarrow V=Ed=\frac{\sigma d}{\varepsilon_0}
+\]
+\[
+C=\frac{Q}{V}=\frac{Q}{\frac{\sigma d}{\varepsilon_0}}=\frac{\varepsilon_0 d}{\sigma}=\frac{\sigma A}{\frac{\sigma d }{\varepsilon_0}}=\frac{A \varepsilon_0}{d}
+\]
+\begin{center}
+  \begin{tikzpicture}[scale=1.2, >=Stealth]
+
+    \draw[thick] (0,1) rectangle (3,1.5);
+    \draw[thick] (0,-1) rectangle (3,-1.5);
+
+    \draw[thick] (-1.5,1.25) -- (0,1.25);
+    \draw[thick] (-1.5,-1.25) -- (0,-1.25);
+    \draw[thick] (-1.5,1.25) -- (-1.5,-1.25);
+    \draw[fill=white] (-1.8,0.2) rectangle (-1.2,-0.1);
+    \draw[thick] (-1.5,-1.25) -- (-1.5,-1.5);
+    \draw[thick] (-1.5,1.25) -- (-1.5,1.5);
+    \draw[thick] (-1.5,1.5) -- (4,1.5);
+    \draw[thick] (-1.5,-1.5) -- (4,-1.5);
+    \draw[thick] (3,1.25) -- (4,1.25);
+    \draw[thick] (3,-1.25) -- (4,-1.25);
+    
+    \draw[<->, dashed] (3.5,1) -- (3.5,-1) node[midway,right] {$d$};
+    
++
+  \end{tikzpicture}
+\end{center}
+\subsection{Condensatore sferico}
+Immaginiamo di avere una sfera conduttrice e un guscio sferico che la contiene anch'esso conduttore, i due oggetti sono inseriti in un circuito che li collega.
+Chiudendo l'interruttore:
+\begin{itemize}
+  \item all'interno dei conduttori $\vec{E}=0$
+  \item la carica totale del sistema rimane nulla
+  \item fra le due \textit{armature} vi è una d.d.p. $V$, dunque si crea un campo elettrostatico 
+\end{itemize}
+Sulla parete interna del guscio si deposita una carica $-Q$ che contrasta la carica $Q$ depositatasi sulla superfice della sfera interna. 
+Dunque nello spazio fra i due materiali vi è solo il campo $\vec{E}$ della carica $Q$. Il campo di una sfera uniformemente carica vale, notoriamente: $\vec{E}= \frac{Q}{4\pi \epsilon_0 r^2}\hat{r}$
+
+Facciamo notare che avremo, sulle superfici, una $\sigma_1$ diversa da $\sigma_2$ anche in modulo. Infatti la carica $\left|Q\right|$ viene distribuita su due aree di modulo differente.
+\begin{center}
+  \begin{tikzpicture}[scale=1.5, >=Stealth]
+    \centering
+      \draw[thick] (0,0) circle (1.5cm);
+      \draw[thick] (0,0) circle (0.7cm);
+      \foreach \angle in {0,45,...,315}
+          \draw[->, thick] (\angle:0.7) -- (\angle:1.5);
+      \node at (0.4,0.3) {R$_1$};
+      \node at (1.2,0.3) {R$_2$};
+      \draw[<->, dashed] (0,0) -- (0.7,0) node[midway,above] {};
+      \draw[<->, dashed] (0,0) -- (1.5,0) node[midway,below] {};
+  \end{tikzpicture}
+\end{center}
+\subsection{Condensatore cilindrico}
+Ora passiamo al caso di due cilindri coassiali collgati da un circuito, come sempre all'interno delle armature $\vec{E}=0$ e $V$ fra di esse.
+Ragionando come prima avremo
+\[
+\vec{E}(\vec{r})=\frac{Q}{4\pi\varepsilon_0 r^2}\hat{r}
+\]
+sapendo che $\sigma 2\pi R_0 =\frac{Q}{l}=\lambda$ ($l$ lunghezza del cilindro)  si ottiene:
+\[
+\vec{E}(\vec{r})= \frac{\lambda}{4\pi\varepsilon_0 r}\hat{r}=\frac{\sigma 2 \pi r}{2 \pi \epsilon_0 r}\hat{r}
+\]
+da cui otteniamo la differenza di potenziale:
+\[
+\Delta V = V = - \int_{R_0}^{R_1} \frac{\sigma 2 \pi R_0}{2\pi\varepsilon_0 r}\,\mathrm{d}r = - \frac{\sigma 2 \pi R_0}{2\pi\varepsilon_0}\ln\left(\frac{R_1}{R_0}\right)= - \frac{Q}{2 \pi \varepsilon_0 l } \ln\left(\frac{R_1}{R_0}\right)
+\]
+Deriviamo anche la capacità:
+\[
+C = \frac{Q}{V}= \frac{1}{\frac{1}{l2\pi\varepsilon_0}\ln\left(\frac{R_1}{R_0}\right)}= \frac{l2\pi\varepsilon_0}{\ln\left(\frac{R_1}{R_0}\right)}
+\]
+\begin{center}
+  \begin{tikzpicture}[scale=1.2, >=Stealth]
+  \draw[thick] (0,0) ellipse (0.7 and 1.2);
+    \draw[thick] (3,0) ellipse (0.7 and 1.2);
+    \draw[thick] (0,1.2) -- (3,1.2);
+    \draw[thick] (0,-1.2) -- (3,-1.2);
+
+    \draw[thick] (0.5,0) ellipse (0.3 and 0.8);
+    \draw[thick] (2.5,0) ellipse (0.3 and 0.8);
+    \draw[thick] (0.5,0.8) -- (2.5,0.8);
+    \draw[thick] (0.5,-0.8) -- (2.5,-0.8);
+
+    \draw[thick] (-1.5,0) -- (0.4,0);
+    \draw[thick] (3,0) -- (4.5,0);
+    \draw[thick] (-1.5,0) -- (-1.5,-1.5);
+    \draw[fill=white] (-1.8,-1.2) rectangle (-1.2,-1.5);
+    \draw[thick] (-1.5,-1.5) -- (-1.5,-1.8);
+    \draw[thick] (4.5,0) -- (4.5,-1.8);
+    \draw[thick] (-1.5,-1.8) -- (4.5,-1.8);
+
+    \node at (-1,0.3) {+};
+    \node at (4,0.3) {-};
+    \node at (-1.5,-1.65) {+};
+    \draw[<->, dashed] (1,0) -- (1,0.8) node[midway,right] {$R_0$};
+  \end{tikzpicture}
+\end{center}
 
 \chapter{I dipoli elettrici}
 \section{Potenziale e campo elettrico di dipolo}
@@ -961,6 +1090,24 @@ Definiremo una componente del campo \textbf{densità di corrente} tale che
   \vec{J_x} dt dy dz = dq \rightarrow \vec{J} = \frac{dq}{dt dy dz}
 \]
 Da cui concludiamo che esso rappresenta la quantità di carica che attraversa la superfice $dydz$ per unità di tempo $\left[\frac{C}{m^2s}\right]$.
+\begin{center}
+  \begin{tikzpicture}[scale=1.5, >=Stealth]
+    \draw[thick] (0,0,0) -- (2,0,0) -- (2,2,0) -- (0,2,0) -- cycle;
+    \draw[thick] (0,0,1.5) -- (2,0,1.5) -- (2,2,1.5) -- (0,2,1.5) -- cycle;
+    \draw[thick] (0,0,0) -- (0,0,1.5);
+    \draw[thick] (2,0,0) -- (2,0,1.5);
+    \draw[thick] (2,2,0) -- (2,2,1.5);
+    \draw[thick] (0,2,0) -- (0,2,1.5);
+
+    \draw[->, very thick] (1,1,0) -- (1,1,2) node[above] {$\vec{J}_x$};
+
+    \draw[<->, dashed] (0,2.2,0) -- (2,2.2,0) node[midway,above] {$dy$};
+    \draw[<->, dashed] (2.2,0,0) -- (2.2,2,0) node[midway,right] {$dz$};
+
+    \draw[pattern=north east lines, pattern color=black] (0,0,0) -- (2,0,0) -- (2,2,0) -- (0,2,0) -- cycle;
+
+  \end{tikzpicture}
+\end{center}
 
 Per una superfice piana si ottiene: $\vec{J} \vec{S} = \vec{J} \hat{n} S = JS \cos(\theta)$.
 
@@ -999,6 +1146,52 @@ posso constatare le seguenti:
   \item Attraverso la superfici paralleli a $\vec{J}$ non passerà alcuna carica (per definizione di $\vec{J}$)
   \item Essendo $\vec{J}$ costante: $\vec{J} \hat{n}_1 S_1 + \vec{J} \hat{n}_2 S_2 = \vec{J} \hat{n} S - \vec{J} \hat{n} S = 0 $
 \end{itemize}
+
+\begin{center}
+  \begin{tikzpicture}[scale=1,>=latex]
+    \def\R{2.0}    
+    \def\H{4.0}  
+    \def\e{0.8,0.4} 
+    \pgfmathsetmacro{\dx}{0.8}
+    \pgfmathsetmacro{\dy}{0.4}
+  
+  
+    \draw (0,\H cm) ellipse (\R cm and 0.6cm);
+    \draw (-\R cm,\H cm) -- (-\R cm,0);
+    \draw (\R cm,\H cm) -- (\R cm,0);
+    \draw[dashed] (0,0) ellipse (\R cm and 0.6cm);
+
+
+    \coordinate (A) at (-0.6,1.2);
+    \coordinate (B) at ( 0.6,1.2);
+    \coordinate (C) at ( 0.6,2.2);
+    \coordinate (D) at (-0.6,2.2);
+    \coordinate (A2) at ($ (A) + (\dx,\dy) $);
+    \coordinate (B2) at ($ (B) + (\dx,\dy) $);
+    \coordinate (C2) at ($ (C) + (\dx,\dy) $);
+    \coordinate (D2) at ($ (D) + (\dx,\dy) $);
+
+    \draw (A) -- (B) -- (C) -- (D) -- cycle; 
+    \draw (A2) -- (B2) -- (C2) -- (D2) -- cycle; 
+    \draw (A) -- (A2);
+    \draw (B) -- (B2);
+    \draw (C) -- (C2);
+    \draw (D) -- (D2);
+
+
+    \draw[dashed] (A2) -- (B2);
+    \draw[dashed] (D2) -- (C2);
+
+    \foreach \x in {-1.5,-0.75,0,0.75,1.5}{
+      \draw[->] (\x,0.3) -- (\x,3.8);
+    }
+
+
+    \draw[->] (2.5,0) -- (3.5,0) node[anchor=west] {$x$};
+    \draw[->] (0,4.8) -- (0,5.6) node[anchor=south] {$z$};
+
+  \end{tikzpicture}
+\end{center}
 In generale, per una superfice chiusa:
 \[
 \frac{dQ}{dt}=-\oint_S \vec{J}(\vec{r}, t)\hat{n}dS
