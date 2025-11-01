@@ -1393,78 +1393,270 @@ Q = -\frac{q z_0}{2}\int_{z_0^2}^{\infty} u^{-3/2}\,du
 \]
 Quindi la carica totale indotta sul piano è \(-q\), come ci si aspettava.
 
-\section{Interazione carica-dipolo indotto}
-\subsection{In generale}
+
+\section{Interazione carica--dipolo indotto}
+
+Consideriamo una sfera metallica isolata e neutra di raggio $r_0$, stimolata da una carica puntiforme positiva $q$ posta sull'asse a distanza $r>r_0$ dal centro. La presenza di $q$ provoca una distribuzione di carica indotta sulla superficie della sfera; all'interno del metallo il campo elettrico è nullo, mentre la sfera, essendo isolata, mantiene un potenziale costante (non necessariamente nullo).
+
+Il potenziale al centro dovuto alla carica di stimolo è
+\[
+V_s(0)=\frac{q}{4\pi\varepsilon_0\,r}.
+\]
+
+Poiché la sfera è neutra, la carica totale indotta sulla superficie è nulla:
+\[
+\int_{S}\sigma\,\mathrm{d}S = 0.
+\]
+Di conseguenza il potenziale dovuto esclusivamente alla carica indotta valutato al centro è
+\[
+V_R(0)=\int_{S}\frac{\sigma(\mathbf r')}{4\pi\varepsilon_0\,r_0}\,\mathrm{d}S
+= \frac{1}{4\pi\varepsilon_0 r_0}\int_{S}\sigma\,\mathrm{d}S = 0.
+\]
+
+Per costruire la soluzione esterna si può usare il metodo delle cariche immagine, come nel caso della sfera collegata a terra, con un piccolo adattamento: introduciamo
+\begin{itemize}
+  \item una carica immagine $q'=-q\frac{r_0}{r}$ collocata lungo l'asse all'interno della sfera alla distanza
+  \[
+  r'=\frac{r_0^2}{r},
+  \]
+  (questa è la stessa immagine che si usa per la sfera collegata a terra e garantisce che la somma dei potenziali di $q$ e $q'$ sia nulla sulla superficie);
+  \item inoltre aggiungiamo una carica puntiforme al centro della sfera $q''$ (che contribuisce con potenziale costante sulla superficie).
+\end{itemize}
+
+Per imporre la neutralità della sfera imponiamo che la carica totale fittizia interna sia nulla, cioè scegliamo
+\[
+q''=-q'.
+\]
+Con questa scelta la somma delle cariche immagine è nulla e la carica totale indotta rappresentata dalle immagini è zero (coerente con la sfera isolata e neutra).
+
+Il potenziale di risposta (cioè il potenziale dovuto alle cariche indotte, valutato nella posizione della carica reale, o in un punto esterno) si ottiene sommando i contributi di $q'$ e $q''$. In particolare, nel punto dove si trova la carica $q$ (a distanza $r$ dal centro), il potenziale di risposta è
+\[
+V_R(r)=\frac{1}{4\pi\varepsilon_0}\left(\frac{q''}{r}+\frac{q'}{\,r-r'\,}\right).
+\]
+Sostituendo $q'=-q\frac{r_0}{r}$, $q''=-q' = q\frac{r_0}{r}$ e $r'=\dfrac{r_0^2}{r}$ si ottiene
+\[
+V_R(r)=\frac{q r_0}{4\pi\varepsilon_0}\!\left(\frac{1}{r^2}-\frac{1}{r^2-r_0^2}\right)
+= -\,\frac{q\,r_0^3}{4\pi\varepsilon_0}\frac{1}{r^2(r^2-r_0^2)},\qquad r>r_0.
+\]
+Da questo si ricava l'energia di interazione (assumendo $U(\infty)=0$) fra la carica e la sfera:
+\[
+U(r)=\frac{1}{2}\,q\,V_R(r)
+= -\,\frac{q^2 r_0^3}{8\pi\varepsilon_0}\frac{1}{r^2(r^2-r_0^2)}.
+\]
+Il fattore $\tfrac12$ è dovuto al fatto che la distribuzione indotta dipende linearmente da $q$.
+
+\paragraph{Limite prossimità alla superficie.}
+Se la carica si trova molto vicina alla superficie, $z\equiv r-r_0\ll r_0$, la carica centrale $q''$ dà un contributo quasi uniforme sulla calotta vicina e risulta spesso trascurabile rispetto al contributo locale della carica immagine $q'$. In tale limite la sfera si comporta come se fosse un conduttore in collegamento a massa (l'approssimazione del piano conduttore locale): la separazione fra la carica e la sua immagine è approssimativamente $\Delta\simeq 2z$ e si recuperano le leggi del caso piano,
+\[
+F(z)\simeq -\frac{q^2}{16\pi\varepsilon_0 z^2},\qquad
+U(z)\simeq -\frac{q^2}{16\pi\varepsilon_0 z},\qquad (z\ll r_0).
+\]
+
+\paragraph{Momento di dipolo indotto.}
+Le cariche immagine definiscono un momento di dipolo indotto sulla sfera (la sola carica $q'$ a distanza $r'$ dall'origine contribuisce al dipolo, la carica $q''$ al centro non contribuisce). Il vettore momento di dipolo indotto vale
+\[
+\vec{p} = q'\, \vec{r'} = -\,q\frac{r_0}{r}\,\frac{r_0^2}{r}\,\hat{r}
+= -\,\frac{q r_0^3}{r^2}\,\hat{r}.
+\]
+Si può esprimere lo stesso risultato in funzione del campo stimolante al centro della sfera, 
+\[
+\vec{ E_s}(0)=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\,\hat{ r}\quad\Rightarrow\quad
+\vec{p} = 4\pi\varepsilon_0 r_0^3\,\vec{E_s}(0).
+\]
+Poiché il volume della sfera è $\mathcal{V}=\tfrac{4}{3}\pi r_0^3$, risulta anche la forma spesso usata
+\[
+\vec{ p} = 3\,\mathcal{V}\,\varepsilon_0\,\vec{ E_s}(0).
+\]
+ 
+
+Si osserva che P è la somma dei campi di stimolo ed ha una validità generale anche se il campo di stimolo non è uniforme.
+
+\paragraph{Campo e carica superficiale indotta (caso campo uniforme).}
+Per un dipolo puntiforme $\vec{ p}$ posto all'origine il campo generale è
+\[
+\mathbf E(\mathbf R) = \frac{1}{4\pi\varepsilon_0}\left(\frac{3(\mathbf p\cdot\hat{\mathbf R})\hat{\mathbf R}-\mathbf p}{R^3}\right).
+\]
+Nel caso particolare di una sfera conduttrice immersa in un campo uniforme $\vec{ E_0}$ (stato di stimolo uniforme), il momento indotto è $\vec{ p} = 4\pi\varepsilon_0 r_0^3\vec{ E_0}$ e la densità di carica superficiale indotta è
+\[
+\sigma(\theta)=3\varepsilon_0 E_0\cos\theta,
+\]
+dove $\theta$ è l'angolo col polo in direzione di $\vec{ E_0}$ e la componente normale del campo sul conduttore fornisce $\sigma=\varepsilon_0 E_n$.
+
 \section{Sfere con distribuzione di carica opposta}
+
+Consideriamo ora due distribuzioni sferiche uguali e sovrapposte traslate di un vettore $\mathbf s$, con densità volumetriche $\rho$ e $-\rho$. Il totale di carica di ciascuna sfera è
+\[
+q=\rho\,\mathcal{V}=\rho\frac{4}{3}\pi r_0^3,
+\]
+e il momento di dipolo risultante (per lo spostamento relativo $\mathbf s$) è
+\[
+\mathbf p = q\,\mathbf s = \mathcal{V}\rho\,\mathbf s.
+\]
+
+Un risultato generale utile è che per una sfera uniformemente polarizzata (cioè con polarizzazione per unità di volume $\vec{ P}$ costante) il campo elettrico all'interno è omogeneo e vale
+\[
+\vec{ E}_{\text{int}} = -\frac{\vec{ P}}{3\varepsilon_0}.
+\]
+Se la polarizzazione è collegata al momento totale come $\vec{ p}=\vec{ P}\,\mathcal{V}$, allora si può anche scrivere
+\[
+\vec{ E}_{\text{int}} = -\frac{\vec{ p}}{3\varepsilon_0\,\mathcal{V}}.
+\]
+
+Nel limite in cui lo spessore dello strato carico diventa piccolo ($s\to 0$, si passa a una superficie polarizzata) si ottiene la densità di carica di legame sulla superficie
+\[
+\sigma_b = \vec{ P}\cdot\hat{n} = \rho\,( s\cdot\hat{\mathbf n}),
+\]
+e, usando $\vec{p}=\vec{ P}\,\mathcal{V}$,
+\[
+\sigma_b = \frac{\vec{ p}\cdot\hat{ n}}{\mathcal{V}}.
+\]
+
+Questa descrizione fornisce il passaggio tra il modello di due sfere volumetriche con carica opposta e il modello limite di una superficie polarizzata (o di una sfera con momento di dipolo totale $\vec{ p}$). Nel caso particolare della sfera conduttrice che abbiamo studiato nel paragrafo precedente, l'induzione crea proprio un momento di dipolo $\vec{ p}=4\pi\varepsilon_0 r_0^3 \vec{ E_s}(0)$ e la corrispondente carica superficiale può essere ottenuta dalle formule precedenti nel caso di stimolo uniforme o più in generale dal derivare del potenziale sulla superficie.
+
+Sulla superficie del conduttore è $E\cdot \hat{n} =3 E_s\cdot \hat{n}$
+
+
+
+
+
+
 \section{Polarizzazione di una sfera dielettrica}
+
+Consideriamo una distribuzione dielettrica con momento dipolare totale $\vec p$ e volume $\mathcal V$. Per un dielettrico uniformemente polarizzato la densit\`a di carica legata superficiale \`e
+\begin{equation}
+\sigma_b = \vec P\cdot\hat n,
+\end{equation}
+
+dove $\vec P$ \`e il vettore di polarizzazione. Se la polarizzazione \`e uniforme e il momento dipolare totale \`e $\vec p$, allora
+\begin{equation}
+\vec P = \frac{\vec p}{\mathcal V},
+\end{equation}
+
+e per una sfera uniformemente polarizzata il campo (campo interno dovuto alle cariche di bound) vale:
+\begin{equation}
+\vec E_{\mathrm{R}} = -\frac{\vec p}{3\varepsilon_0\mathcal V} = -\frac{\vec P}{3\varepsilon_0}.
+\end{equation}
+
+Ora prendiamo una sfera di materiale lineare, omogeneo e isotropo, con suscettivit\`a elettrica $\chi=\varepsilon-1$). Quindi si ha:
+\begin{equation}
+\vec P = \varepsilon_0\chi\,\vec E,
+\end{equation}
+
+dove $\vec E$ \`e il campo totale all'interno della sfera. Quindi si ha che:
+\begin{equation}
+\vec E = \vec E_s + \vec E_{\mathrm{R}} = \vec E_s - \frac{\vec P}{3\varepsilon_0}.
+\end{equation}
+
+Sostituendo con quanto trovato prima si ottiene:
+\begin{align}
+\vec P &= \varepsilon_0\chi\left(\vec E_s - \frac{\vec P}{3\varepsilon_0}\right)
+= \varepsilon_0\chi\,\vec E_s - \frac{\chi}{3}\,\vec P.
+\end{align}
+
+Raccogliendo i termini in $\vec P$:
+\begin{equation}
+\vec P\left(1+\frac{\chi}{3}\right) = \varepsilon_0\chi\,\vec E_s
+\quad\Rightarrow\quad
+\vec P = \varepsilon_0\vec E_s\frac{\chi}{1+\chi/3} = \varepsilon_0\vec E_s\frac{3\chi}{3+\chi}.
+\end{equation}
+
+Il momento dipolare totale indotto nella sfera risulta quindi (con un fattore $\frac{\chi}{3+\chi}$ in più)
+\begin{equation}
+\vec p = \mathcal V\,\vec P = \mathcal V\varepsilon_0\vec E_0\frac{3\chi}{3+\chi}.
+\end{equation}
+
+Mentre il campo interno alla sfera \`e
+$$
+\vec{E}=\frac{P}{\chi\varepsilon_0}=\frac{1}{\varepsilon_0\chi}\varepsilon_0\chi\vec{E_s}\frac{3}{3+\chi}= \vec{E_s}\frac{3}{3+\chi}
+$$
+che in particolare tende al risultato del conduttore ideale per $\varepsilon\to\infty$ .
 
 \chapter{Magnetismo}
 \section{Introduzione}
-D'ora in poi comincieremo a considerare il problema delle cariche in moto. E\' noto che se avviciniamo due fili percorsi 
-da corrente di stessa direzione e verso essi si attraggono, contrariamente, se i fili sono percorsi da corrente di verso opposto, si respingono.
 
-Potremmo pensare che ciò è dovuto a forze elettriche, ma se andassimo a inserire una carica di prova fra i due fili, nessuna forza agirebbe su di essa.
+D'ora in poi cominceremo a considerare il problema delle cariche in moto. \`E noto che se avviciniamo due fili percorsi da corrente di stessa direzione essi si attraggono; se i fili sono percorsi da correnti in verso opposto, si respingono. Questo fenomeno non si spiega con forze elettriche su una carica di prova posta tra i fili, ma \`e dovuto alla forza magnetica associata al campo magnetico $\vec B$ prodotto dalle cariche in movimento.
 
-Ciò che abbiamo appena descritto è dovuto, diffati, alla \textbf{forza magnetica}, dovuta al \textbf{campo magnetico} $\vec{B}$ prodotto dalle cariche in movimento.
+Inoltre i primi fenomeni magnetici osservati storicamente erano associati a dipoli (es.: bussole). Non \`e possibile isolare un monopolo magnetico nella materia ordinaria: questa propriet\`a si esprime matematicamente con la prima equazione di Maxwell per il campo magnetico
+\begin{equation}
+\nabla\cdot\vec B(\vec r,t)=0,
+\end{equation}
 
- 
-\section{Legge di Biot-Savart}
-Definiamo la \textit{corrente stazionaria} un flusso di cariche continuo nel tempo, essa caratterizza campi magnetici statici,
-per questo in tal caso si parla di \textbf{magnetostatica}. 
+la cui forma integrale implica che il flusso magnetico uscente da qualsiasi superficie chiusa \`e nullo:
+\begin{equation}
+\oint_{S}\vec B\cdot d\vec S = 0.
+\end{equation}
 
-Il regime elettro/magneticostatico è definito dalle seguenti condizioni:
+\subsection{Momento di dipolo magnetico}
+
+Un dipolo magnetico possiede un momento magnetico vettoriale $\vec m$ e subisce una coppia (momento delle forze) se immerso in un campo magnetico esterno $\vec B$:
+\begin{equation}
+\vec C = \vec m \times \vec B.
+\end{equation}
+
+L'analogia con il dipolo elettrico (momento di dipolo elettrico $\vec p$ e coppia $\vec p\times\vec E$) \`e utile ma occorre ricordare che le sorgenti magnetiche sono correnti piuttosto che cariche libere isolate.
+
+\section{Legge di Biot--Savart}
+
+Definiamo la \textit{corrente stazionaria} come un flusso di cariche continuo nel tempo; essa caratterizza campi magnetici statici e questo regime prende il nome di \textbf{magnetostatica}. Le condizioni per la magnetostatica sono
 \[
-\frac{\partial \rho}{\partial t}=0 \quad \frac{\partial \vec{J}}{\partial t}=0
+\frac{\partial \rho}{\partial t}=0,\quad \frac{\partial \vec{J}}{\partial t}=0,
 \]
-ovunque e per qualsiasi $t$.
-Ovviamente nella realta\' ciò non può mai essere verificato, ma spesso tale condizione può essere una buona approssimazione.
+ovunque e per qualsiasi $t$. In magnetostatica vale inoltre l'equazione di continuit\`a nella forma
+\[
+\nabla\cdot\vec J = 0.
+\]
 
-Inoltre notiamo che in magnetostatica la condizione $\frac{\partial \rho}{\partial t}=0$ è sempre rispettata poichè $I$ deve rimanere costante,
-diversamente vorrebbe dire che la carica si sia accumulata in qualche luogo. Più generalmente, in magnetostatica l'equazione di continuità diviene:
-\[
-\nabla \dot \vec{J} =0
-\]
-Il campo magnetico di una corrente stazionaria è data dalla \textbf{legge di Biot-Savart}:
-\[
-\vec{B}(\vec{r})= \frac{\mu_0}{4\pi}\int\frac{\vec{I} \times \hat{r}}{r^2} dl' = \frac{\mu_0}{4\pi}I \int \frac{dl' \times \hat{r}}{r^2}
-\]
-\begin{itemize}
-  \item l'integrazione si svolge lungo e in direzione concorde con il percorso della corrente
-  \item  $dl'$ è un elementino del filo
-  \item la costante $\mu_0$ viene detta \textbf{permeabilità magnetica del vuoto} e vale $\mu_0=4\pi\cdot 10^{-7} N/A^2$
-\end{itemize}
-ciò impone che l'unità di misura di $\vec{B}$ sia $[\frac{N}{(Am)}] = [T]$. Il prodotto vettoriale $ \vec{I} \times \hat{r}$ ci ricorda che il campo magnetico è 
-perpendicolare al verso della corrente.
+Il campo magnetico generato da una corrente stazionaria (in questo caso in superfici o volumi) \`e dato dalla \textbf{legge di Biot--Savart}:
+\begin{equation}
+\vec{B}(\vec{r}) = \frac{\mu_0}{4\pi}I\int\frac{d\vec l'\times\hat r}{r^2} = \frac{\mu_0}{4\pi}\int\frac{\vec J(\vec r')\times\hat r}{r^2} \,d\tau',
+\end{equation}
 
-Per superfici e volumi percorsi da corrente la legge di Biot-Savarat diviene la seguente
-\[
-\vec{B}(\vec{r})= \frac{\mu_0}{4\pi}\int\frac{\vec{K}(\vec{r'}) \times \hat{r}}{r^2} da' \quad \vec{B}(\vec{r})  \frac{\mu_0}{4\pi} \int \frac{ \vec{J}(\vec{r'}) \times \hat{r}}{r^2} d\tau'
-\]
-ricordiamo che una singola carica \textbf{non} può costituire una corrente stazionaria, poichè, proprio a causa del suo movimento
+dove l'integrazione lungo il filo si svolge nel verso della corrente, $d\vec l'$ \`e un elemento di lunghezza del filo e $\hat r$ \`e il versore che collega l'elemento di corrente al punto di osservazione. La costante $\mu_0$ \`e la permeabilit\`a magnetica del vuoto e vale $\mu_0=4\pi\cdot10^{-7}\,\mathrm{N/A^2}$ (ciò impone che l'unit\`a di misura di $\vec{B}$ sia: tesla, $[T]=\mathrm{N/(Am)}$).
+
+Per un filo rettilineo infinito si ricava l'espressione
+\begin{equation}
+B(R) = \frac{\mu_0 I}{2\pi R},
+\end{equation}
+valida nell'approssimazione in cui la lunghezza del filo \`e molto maggiore della distanza $R$ dal filo.
+\\
+Ricordiamo che una singola carica \textbf{non} può costituire una corrente stazionaria, poichè, proprio a causa del suo movimento
 cambia le condizioni del punto considerato a istanti diversi (un attimo prima c'è, un attimo dopo no).
-
+\\
 Infine notiamo che il campo $\vec{B}(\vec{r})$ rispetta il principio di sovrapposizione: se abbiamo una collezzione di sorgenti di corrente
 $\vec{B}_{tot}(\vec{r})$ sarà la somma (\textbf{vettoriale}) dei singoli campi.
-\section{II equazione di Maxwell}
+
+\section{II equazione di Maxwell e note sulla magnetostatica}
+
+La condizione
+\begin{equation}
+\nabla\cdot\vec B=0
+\end{equation}
+
+enuncia l'assenza di monopoli magnetici e garantisce che le linee di campo magnetico siano sempre chiuse. La legge di Amp\`ere, nella forma corretta di Amp\`ere--Maxwell, mette in relazione \(\nabla\times\vec B\) con densit\`a di corrente e il termine di spostamento elettrico:
+\begin{equation}
+\nabla\times\vec B = \mu_0\vec J + \mu_0\varepsilon_0\frac{\partial\vec E}{\partial t}.
+\end{equation}
+
+In magnetostatica il termine di derivata temporale si annulla e si recupera la legge di Amp\`ere classica:
+\begin{equation}
+\nabla\times\vec B = \mu_0\vec J.
+\end{equation}
+
 \section{Forza di Lorentz}
-Tale campo circola intorno al filo e la forza da esso sviluppata è la \textbf{forza di Lorentz}:
-\[
-\vec{F}_{mag}= Q(\vec{v} \times \vec{B})
-\]
-dove 
-\begin{itemize}
-  \item \(Q\) \`e la carica che subisce la forza
-  \item \(\vec{v}\) \`e la velocita' della carica
-\end{itemize}
-Se siamo in presenza sia di un campo magnetico che elettrico otteniamo:
-\[
-\vec{F}=Q\left[\vec{E}+\left(\vec{v} \times \vec{B}\right)\right]
-\]
-Una implicazione molto importante e\' la seguente, supponendo che $Q$ si muova di una quantità pari a $d\vec{l}=\vec{v}dt$:
-\[
-dL_{mag}=\vec{F}_{mag} \dot d\vec{l}=Q\left[\vec{E}+\left(\vec{v} \times \vec{B}\right)\right] \dot v dt =0
-\]
-poichè $(\vec{v} \times \vec{B}) \perp \vec{v}$.
+
+Una carica in movimento \`e soggetta alla forza di Lorentz:
+\begin{equation}
+\vec{F}_{\mathrm{mag}} = Q\,\left(\vec v\times\vec B\right),
+\end{equation}
+
+mentre se sono presenti sia campo elettrico che magnetico la forza totale su una carica \`e
+\begin{equation}
+\vec{F} = Q\left[\vec E + \left(\vec v\times\vec B\right)\right].
+\end{equation}
+
+dove \(Q\) \`e la carica che subisce la forza e \(\vec{v}\) \`e la velocita' della carica.
+Poich\`e il termine magnetico \((\vec v\times\vec B)\) \`e sempre perpendicolare a $\vec v$, esso non compie lavoro sulla carica puntiforme e quindi non varia l'energia cinetica associata al moto (se non intervengono altri campi non conservativi).
+
 \section{Campo di magnetizzazione}
 \subsection{Interpretazione}
 \section{Esempi}
