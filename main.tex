@@ -896,7 +896,49 @@ Nel contesto dei materiali solidi conviene tenere presente le seguenti considera
 
 
 \section{Campo elettrico in un materiale conduttore}
+In questa sezione consideremo campi elettrici di stimolo costanti.
+
+Le proprietà più importanti per un conduttore sono le seguenti:
+\begin{itemize}
+  \item $\vec{E}=0$ all'interno di un conduttore, perchè se vi fossero delle cariche esse si muoverebbero e non ci troveremmo più in una situazione elettrostatica.
+  
+  Da questo segue che, in caso vi sia la presenza di un campo di stimolo ($E_s$), le cariche all'interno del conduttore creerebbero un campo di risposta, in modo da 
+  annullare $E_s$
+  \item $\rho=0$ all'interno di un conduttore, ciò segue dalla legge di Gauss in forma locale: $\nabla E = \frac{\rho}{\epsilon_0}=0$.
+  \item Qualsiasi carica rimanente all'interno del conduttore verra' ridistribuita sulla superficie.
+  \item Un conduttore rappresenta una \textbf{superfice equipotenziale}, da cui si ottiene che $\vec{E}$ perpendicolare alla superficie del materiale.
+  Ciò porta a concludere che sulla superfice di un conduttore è presenta una discontinuità per la componente $E_{\perp_R}$, che vale, immediatamente fuori dalla superfice:
+  \[
+  \vec{E}= E_{\perp}\hat{n}=\frac{\sigma}{\epsilon_0} \rightarrow \Delta E_{\perp_R} = \frac{\sigma}{\epsilon_0}
+  \]
+  in termini di pote nziale questo si traduce in: $\sigma = -\epsilon_0 \frac{\partial V}{\partial n}$
+\end{itemize}
+
+\subsection{Esempi}
+\subsubsection{Guscio sferico conduttore}
+Analizziamo il caso di un guscio sferico conduttore al cui all'interno vi è una carica di stimolo $q$, il campo, internamente deve essere nulla, quindi
+la carica ridistribuitosi con densità $\sigma$ sulla deve essere pari a $-q$, d'altra parte all'esterno del conduttore noteremo la presenza di questa carica interna,
+poichè un altra ridistribuzione di cariche avviene sulla superfice esterna del conduttore, per contrastare quella interna. 
+\subsubsection{Carica non centrata}
+Immaginiamo di avere una sfera conduttrice con all'interno una\' cavità di qualsiasi forma, al cui interno vi è una carica. In questo caso avremo
+\begin{itemize}
+  \item Una ridistribuzione di cariche sulla superfice interna, che dovrà essere pari a $-q$
+  \item Poichè ora all'interno del conduttore non vi sono più cariche vi sarà una ridistribuzione \textbf{uniforme} di cariche sulla superfice. Inoltre
+  \textit{l'unica configurazione che permette di avere campo nullo all'interno è quella in cui la carica si distribuisce uniformemente}.
+\end{itemize}
+Ci potremmo chiedere come ciò sia possibile (ci potremmo aspettare una ridistribuzione non uniforme), basti sapere che \textit{esiste} una modo di ridistribuire la carica $-q$
+tale che esso cancella la carica interna, permettendo la ridistribuzione uniforme.
+
+Ovviamente, ciò vale anche per una carica esterna, a parti invertite (la ridistribuzione non uniforme si ha sulla superfice esterna).
+\subsection{Gabbia di Faraday}
+Vediamo infine il caso di una cavità senza all'interno cariche. In questo caso osserviamo subito che al suo interno non vi deve essere campo, poichè $\oint_\gamma \vec{E} dl=0$,
+se avessimo un campo all'interno della cavità e prendessimo un percorso chiuso passante per essa, ma che si chiude all'interno del conduttore, otterremo un risultato diverso.
+Tale principio è detto il principio della \textbf{gabbia di Faraday}
 \section{Capacit\`a e condensatori}
+Supponiamo di avere due conduttori di carica $+Q$ e $-Q$, poichè il $V$ è costante sulle superfici possiamo trattarne la differenza:
+\[
+\Delta V = V^+ -V^- = \int_{-}^{+} \vec{E} dl
+\]
 \subsection{Condensatore all'infinito}
 \section{Energia immagazzinata in un condensatore}
 \section{Condensatore piano}

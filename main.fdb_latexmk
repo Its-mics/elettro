@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1761995825.76135 "c:/Users/manue/Documents/UNIVERSITA'/II ANNO/elettro/main.tex" "main.pdf" "main" 1761995828.68426 0
-  "C:/Users/manue/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1761994786 81015 8f522890e5525b3cb752cee1c80a3b68 ""
+["pdflatex"] 1762024393.10613 "c:/Users/manue/Documents/UNIVERSITA'/II ANNO/elettro/main.tex" "main.pdf" "main" 1762024395.7109 0
+  "C:/Users/manue/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762008248 81015 8f522890e5525b3cb752cee1c80a3b68 ""
   "C:/Users/manue/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1746380982 11548 3d3804846c5eaeeff4fa0fa034a6289a ""
   "C:/Users/manue/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1745473716 13148213 8c8187dafc6b6c91837edfc68c8dcba1 ""
   "C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993058908 1436 c7f957a372ef2fbe93c0982f96625e12 ""
@@ -227,11 +227,11 @@
   "C:/Users/manue/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729261622 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/manue/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656233319 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "Immagini/Relazioni.png" 1761663690 68362 7f61b9d0a8af376b2d2b46d8e8745020 ""
-  "c:/Users/manue/Documents/UNIVERSITA'/II ANNO/elettro/main.tex" 1761995825 79316 7e7a40441bfe063c6ddb97193f08cbb7 ""
-  "main.aux" 1761995828 19587 035151d150dadb17c0d0f365b0794296 "pdflatex"
-  "main.out" 1761995828 25571 ac209c70e1993793c0ee262ce5a177ae "pdflatex"
-  "main.tex" 1761995825 79316 7e7a40441bfe063c6ddb97193f08cbb7 ""
-  "main.toc" 1761995828 12118 35e8d6287edc63374886c885618b5a1e "pdflatex"
+  "c:/Users/manue/Documents/UNIVERSITA'/II ANNO/elettro/main.tex" 1762024392 93008 352d2a83f7348b670aa1f022fa7ab47d ""
+  "main.aux" 1762024395 20486 fc824759f2a84ffd53d147b34973af52 "pdflatex"
+  "main.out" 1762024395 26062 91152744b927d6d03f12b5db111ba372 "pdflatex"
+  "main.tex" 1762024392 93008 352d2a83f7348b670aa1f022fa7ab47d ""
+  "main.toc" 1762024395 12730 02ddd90930aa369ff520c3b9f1214d02 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
