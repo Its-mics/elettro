@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz} % QUesto è per i Grafici 
 \usepackage{siunitx}
+\usepackage{bm}
 
 \usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
 
@@ -911,8 +912,76 @@ Nel contesto dei materiali solidi conviene tenere presente le seguenti considera
 
 \chapter{Correnti elettriche e campo di polarizzazione}
 \section{La densit\`a di corrente elettrica}
+Supponiamo che le cariche possano spostarsi e quindi fluire all'esterno di un volumetto definito (come un parallelepipedo).
+Definiremo una componente del campo \textbf{densità di corrente} tale che
+\[
+  \vec{J_x} dt dy dz = dq \rightarrow \vec{J} = \frac{dq}{dt dy dz}
+\]
+Da cui concludiamo che esso rappresenta la quantità di carica che attraversa la superfice $dydz$ per unità di tempo $\left[\frac{C}{m^2s}\right]$.
+
+Per una superfice piana si ottiene: $\vec{J} \vec{S} = \vec{J} \hat{n} S = JS \cos(\theta)$.
+
+Ovviamente se il piano è parallalelo a $\vec{J}$, allora $\vec{J} \cdot \vec{S} = 0$.
+
+Per una superfice definita in modo arbitrario:
+\begin{enumerate}
+  \item Scomponiamo $d\vec{S}=d\vec{S}_x + d\vec{S}_y + d\vec{S}_z =  d\vec{S}\hat{n_x} + d\vec{S} \hat{n_y} + d\vec{S} \hat{n_z}$
+  \item Da cui si ottiene $\left(\vec{J_x}d\vec{S}\hat{n_x} + \vec{J_y}d\vec{S}\hat{n_y} + \vec{J_z}d\vec{S}\hat{n_z}\right) dt = \vec{J} \cdot d\vec{S} \hat{n}dt = \vec{J} \cdot \hat{n} dS$   
+\end{enumerate}
+
+
+Se $\vec{J}$ è costante allora vuol dire che le cariche si muovono uniformemente nella stessa direzione, cio accade frequentemente
+in un filo cilindrico in cui fluisce carica.
+
+
+
 \section{La corrente}
+Nel caso in cui la superfice sia piana, di area A, e $\vec{J}$ sia uniforme e perpendicolare alla superficie: 
+\[
+\vec{J}d\vec{S}=JA=I
+\]
+Definiamo $I$ come la \emph{corrente} attraverso la superfice $\left[A=\frac{C}{s}\right]$.
+
+Per una superfice generica si ottiene:
+\[
+I = \int_S \vec{J}(\vec{r}) \cdot \hat{n}d{S} 
+\]
+oppure definita come $I=\frac{dQ}{dt}$
+
+
 \section{Legge di conservazione della carica}
+Immaginando di prendere un tubo cilindrico e localizzando un volumetto parallelepipedeo, supponendo che la densità di corrente sia costante,
+posso constatare le seguenti:
+\begin{itemize}
+  \item Attraverso la superfici paralleli a $\vec{J}$ non passerà alcuna carica (per definizione di $\vec{J}$)
+  \item Essendo $\vec{J}$ costante: $\vec{J} \hat{n}_1 S_1 + \vec{J} \hat{n}_2 S_2 = \vec{J} \hat{n} S - \vec{J} \hat{n} S = 0 $
+\end{itemize}
+In generale, per una superfice chiusa:
+\[
+\frac{dQ}{dt}=-\oint_S \vec{J}(\vec{r}, t)\hat{n}dS
+\]
+da cui si ricava che, se vi è un flusso all'interno di un volumetto, la carica al suo interno cambia di una quantità pari al flusso di $\vec{J}$.
+Tale legge viene detta \textbf{legge di conservazione della carica in forma integrale} (per sistemi isolati).
+
+Inoltre, riscrivendo $Q=\oint_{V_S}\rho(\vec{r},t)$:
+\[
+\displaystyle \frac{d}{dt}\oint_{V_S}\rho(\vec{r},t)=-\oint_{S_V}\vec{J}(\vec{r},t)\hat{n}dS=-\int_{V_{S}} \nabla \vec{J}(\vec{r},t) dV
+\]
+poichè non abbiamo fatto alcuna ipotesi sul volume, si ottiene la \textbf{legge di conservazione della carica in forma locale}:
+\[
+\frac{d}{dt}\rho(\vec{r},t)=-\nabla\vec{J}(\vec{r},t)
+\]
+
+Utilizzando le leggi appena ricavate osserviamo ciò che accade all'interno di un materiale inizialmente isolato, privo di campi di stimolo
+(ma con una carica build-in). Si ha per $t=0$ una specifica $\rho(\vec{r},0)$ che al tempo $t$, dopo lo stimolo diviene
+\[
+ \underbrace{\rho_{C}(\vec{r},t)}_{\text{d'interesse}}= \rho_{tot}(\vec{r},t)- \underbrace{\rho_{build-in}(\vec{r},0)}_{=\rho(\vec{r},0)}
+\]
+che posso riformulare come 
+\[
+\rho_{C}(\vec{r},t)=\int_{0}^{t}\frac{\partial}{\partial{t'}}\rho(\vec{r},t')dt'=-\int_{0}^{t}\nabla\vec{J}(\vec{r},t')dt'=-\nabla\int_{0}^{t}\vec{J}(\vec{r},t')dt'
+\]
+Quindi le correnti si sono generate a causa di uno stimolo.
 \subsection{Modelliziamo l'atomo}
 \section{Carica elettrica legata e libera}
 \section{Campo di polarizzazione}
