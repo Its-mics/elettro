@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.24)  1 NOV 2025 02:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.3) (preloaded format=pdflatex 2025.4.24)  1 NOV 2025 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -507,7 +507,21 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \extratabsurround=\skip58
 \backup@length=\skip59
 \ar@cellbox=\box75
-)) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+)) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/dutchcal\dutchcal.sty
+Package: dutchcal 2011/06/16 v1 U/dutchcal
+ (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count339
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 8.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  U/dutchcal/m/n --> U/dutchcal/b/n on input line 9.
+) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
 Package: bm 2023/12/19 v1.2f Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
@@ -526,55 +540,55 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
+(C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen288
 \pgfdecoratedremainingdistance=\dimen289
 \pgfdecoratedinputsegmentcompleteddistance=\dimen290
 \pgfdecoratedinputsegmentremainingdistance=\dimen291
 \pgf@decorate@distancetomove=\dimen292
-\pgf@decorate@repeatstate=\count339
+\pgf@decorate@repeatstate=\count340
 \pgfdecorationsegmentamplitude=\dimen293
 \pgfdecorationsegmentlength=\dimen294
 )
 \tikz@lib@dec@box=\box76
-) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex))
-(C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count340
+\l__color_backend_stack_int=\count341
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
  (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count341
+\scratchcounter=\count342
 \scratchdimen=\dimen295
 \scratchbox=\box77
-\nofMPsegments=\count342
-\nofMParguments=\count343
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count344
+\nofMPsegments=\count343
+\nofMParguments=\count344
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count345
 \MPscratchDim=\dimen296
-\MPnumerator=\count345
-\makeMPintoPDFobject=\count346
-\everyMPtoPDFconversion=\toks44
+\MPnumerator=\count346
+\makeMPintoPDFobject=\count347
+\everyMPtoPDFconversion=\toks46
 ) (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -615,27 +629,27 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 22.
-LaTeX Info: Redefining \it@ccap on input line 22.
+LaTeX Info: Redefining \it@ocap on input line 23.
+LaTeX Info: Redefining \it@ccap on input line 23.
 
 File italian.ldf warning: 
 italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting
-italian.ldf    on input line 22.
+italian.ldf    on input line 23.
 
-Package hyperref Info: Link coloring OFF on input line 22.
+Package hyperref Info: Link coloring OFF on input line 23.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 22.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+Package translations Info: no dictionary file `translations-basic-dictionary-italian.trsl' found. on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 27.
  (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 27.
  (C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -694,24 +708,24 @@ Capitolo 2.
 ]
 Capitolo 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--366
+Underfull \hbox (badness 10000) in paragraph at lines 360--367
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--374
+Underfull \hbox (badness 10000) in paragraph at lines 370--375
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 380--385
+Underfull \hbox (badness 10000) in paragraph at lines 381--386
 
  []
 
 
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 394--401
+Underfull \hbox (badness 10000) in paragraph at lines 395--402
 
  []
 
@@ -720,10 +734,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--401
 [18]
 Capitolo 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--447
+Underfull \hbox (badness 10000) in paragraph at lines 443--448
 
  []
 
+LaTeX Font Info:    Trying to load font information for U+dutchcal on input line 478.
+(C:\Users\manue\AppData\Local\Programs\MiKTeX\tex/latex/dutchcal\udutchcal.fd
+File: udutchcal.fd 2011/06/16 Fontinst v1.933 font definitions for U/dutchcal.
+)
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 10.0pt on input line 478.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 7.0pt on input line 478.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 5.0pt on input line 478.
 
 
 [19
@@ -733,22 +757,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--447
 [20]
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 623--627
+Underfull \hbox (badness 10000) in paragraph at lines 624--628
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 623--627
+Underfull \hbox (badness 10000) in paragraph at lines 624--628
 
  []
 
 
 
 [22]
-<Immagini/Relazioni.png, id=801, 448.67625pt x 373.395pt>
+<Immagini/Relazioni.png, id=802, 448.67625pt x 373.395pt>
 File: Immagini/Relazioni.png Graphic file (type png)
 <use Immagini/Relazioni.png>
-Package pdftex.def Info: Immagini/Relazioni.png  used on input line 665.
+Package pdftex.def Info: Immagini/Relazioni.png  used on input line 666.
 (pdftex.def)             Requested size: 330.42041pt x 274.99184pt.
 
 
@@ -801,7 +825,7 @@ Capitolo 9.
 [36]
 
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1202
+Underfull \hbox (badness 10000) in paragraph at lines 1199--1203
 
  []
 
@@ -814,26 +838,33 @@ Capitolo 10.
 [39
 
 ]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\to' on input line 1299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 1299.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 12.0pt on input line 1300.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1300.
+LaTeX Font Info:    Font shape `U/dutchcal/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1299.
+(hyperref)                removing `math shift' on input line 1300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\to' on input line 1300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 1300.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1300.
 
 
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 1344--1349
+Underfull \hbox (badness 10000) in paragraph at lines 1345--1350
 
  []
 
@@ -849,13 +880,13 @@ Capitolo 11.
 
 ]
 
-[44
-
-]
+[44]
 Capitolo 12.
 
 
-[45]
+[45
+
+]
 
 [46
 
@@ -909,20 +940,20 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1AEF4F52366C7642784AD82C0BD842DE;25574.
+(rerunfilecheck)             Checksum: AC209C70E1993793C0EE262CE5A177AE;25571.
  ) 
 Here is how much of TeX's memory you used:
- 27016 strings out of 469959
- 551001 string characters out of 5469834
- 899603 words of memory out of 5000000
- 53180 multiletter control sequences out of 15000+600000
- 646402 words of font info for 109 fonts, out of 8000000 for 9000
+ 27279 strings out of 469959
+ 555496 string characters out of 5469834
+ 904548 words of memory out of 5000000
+ 53420 multiletter control sequences out of 15000+600000
+ 649213 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,12n,87p,732b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\manue\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (57 pages, 615049 bytes).
+ <C:\Users\manue\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/dutchcal/DutchCalReg.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/manue/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (57 pages, 626020 bytes).
 PDF statistics:
- 1128 PDF objects out of 1200 (max. 8388607)
+ 1133 PDF objects out of 1200 (max. 8388607)
  209 named destinations out of 1000 (max. 500000)
  1090 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -9,6 +9,7 @@
 \usepackage{xcolor}
 \usepackage{tikz} % QUesto è per i Grafici 
 \usepackage{siunitx}
+\usepackage{dutchcal}
 \usepackage{bm}
 
 \usetikzlibrary{arrows.meta,calc,positioning,decorations.pathreplacing}
@@ -1399,9 +1400,71 @@ Quindi la carica totale indotta sul piano è \(-q\), come ci si aspettava.
 
 \chapter{Magnetismo}
 \section{Introduzione}
-\section{Legge di Biot--Savart}
+D'ora in poi comincieremo a considerare il problema delle cariche in moto. E\' noto che se avviciniamo due fili percorsi 
+da corrente di stessa direzione e verso essi si attraggono, contrariamente, se i fili sono percorsi da corrente di verso opposto, si respingono.
+
+Potremmo pensare che ciò è dovuto a forze elettriche, ma se andassimo a inserire una carica di prova fra i due fili, nessuna forza agirebbe su di essa.
+
+Ciò che abbiamo appena descritto è dovuto, diffati, alla \textbf{forza magnetica}, dovuta al \textbf{campo magnetico} $\vec{B}$ prodotto dalle cariche in movimento.
+
+ 
+\section{Legge di Biot-Savart}
+Definiamo la \textit{corrente stazionaria} un flusso di cariche continuo nel tempo, essa caratterizza campi magnetici statici,
+per questo in tal caso si parla di \textbf{magnetostatica}. 
+
+Il regime elettro/magneticostatico è definito dalle seguenti condizioni:
+\[
+\frac{\partial \rho}{\partial t}=0 \quad \frac{\partial \vec{J}}{\partial t}=0
+\]
+ovunque e per qualsiasi $t$.
+Ovviamente nella realta\' ciò non può mai essere verificato, ma spesso tale condizione può essere una buona approssimazione.
+
+Inoltre notiamo che in magnetostatica la condizione $\frac{\partial \rho}{\partial t}=0$ è sempre rispettata poichè $I$ deve rimanere costante,
+diversamente vorrebbe dire che la carica si sia accumulata in qualche luogo. Più generalmente, in magnetostatica l'equazione di continuità diviene:
+\[
+\nabla \dot \vec{J} =0
+\]
+Il campo magnetico di una corrente stazionaria è data dalla \textbf{legge di Biot-Savart}:
+\[
+\vec{B}(\vec{r})= \frac{\mu_0}{4\pi}\int\frac{\vec{I} \times \hat{r}}{r^2} dl' = \frac{\mu_0}{4\pi}I \int \frac{dl' \times \hat{r}}{r^2}
+\]
+\begin{itemize}
+  \item l'integrazione si svolge lungo e in direzione concorde con il percorso della corrente
+  \item  $dl'$ è un elementino del filo
+  \item la costante $\mu_0$ viene detta \textbf{permeabilità magnetica del vuoto} e vale $\mu_0=4\pi\cdot 10^{-7} N/A^2$
+\end{itemize}
+ciò impone che l'unità di misura di $\vec{B}$ sia $[\frac{N}{(Am)}] = [T]$. Il prodotto vettoriale $ \vec{I} \times \hat{r}$ ci ricorda che il campo magnetico è 
+perpendicolare al verso della corrente.
+
+Per superfici e volumi percorsi da corrente la legge di Biot-Savarat diviene la seguente
+\[
+\vec{B}(\vec{r})= \frac{\mu_0}{4\pi}\int\frac{\vec{K}(\vec{r'}) \times \hat{r}}{r^2} da' \quad \vec{B}(\vec{r})  \frac{\mu_0}{4\pi} \int \frac{ \vec{J}(\vec{r'}) \times \hat{r}}{r^2} d\tau'
+\]
+ricordiamo che una singola carica \textbf{non} può costituire una corrente stazionaria, poichè, proprio a causa del suo movimento
+cambia le condizioni del punto considerato a istanti diversi (un attimo prima c'è, un attimo dopo no).
+
+Infine notiamo che il campo $\vec{B}(\vec{r})$ rispetta il principio di sovrapposizione: se abbiamo una collezzione di sorgenti di corrente
+$\vec{B}_{tot}(\vec{r})$ sarà la somma (\textbf{vettoriale}) dei singoli campi.
 \section{II equazione di Maxwell}
 \section{Forza di Lorentz}
+Tale campo circola intorno al filo e la forza da esso sviluppata è la \textbf{forza di Lorentz}:
+\[
+\vec{F}_{mag}= Q(\vec{v} \times \vec{B})
+\]
+dove 
+\begin{itemize}
+  \item \(Q\) \`e la carica che subisce la forza
+  \item \(\vec{v}\) \`e la velocita' della carica
+\end{itemize}
+Se siamo in presenza sia di un campo magnetico che elettrico otteniamo:
+\[
+\vec{F}=Q\left[\vec{E}+\left(\vec{v} \times \vec{B}\right)\right]
+\]
+Una implicazione molto importante e\' la seguente, supponendo che $Q$ si muova di una quantità pari a $d\vec{l}=\vec{v}dt$:
+\[
+dL_{mag}=\vec{F}_{mag} \dot d\vec{l}=Q\left[\vec{E}+\left(\vec{v} \times \vec{B}\right)\right] \dot v dt =0
+\]
+poichè $(\vec{v} \times \vec{B}) \perp \vec{v}$.
 \section{Campo di magnetizzazione}
 \subsection{Interpretazione}
 \section{Esempi}

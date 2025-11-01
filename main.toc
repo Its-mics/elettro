@@ -83,12 +83,12 @@
 \contentsline {section}{\numberline {10.5}Polarizzazione di una sfera dielettrica}{42}{section.10.5}%
 \contentsline {chapter}{\numberline {11}Magnetismo}{43}{chapter.11}%
 \contentsline {section}{\numberline {11.1}Introduzione}{43}{section.11.1}%
-\contentsline {section}{\numberline {11.2}Legge di Biot--Savart}{43}{section.11.2}%
-\contentsline {section}{\numberline {11.3}II equazione di Maxwell}{43}{section.11.3}%
-\contentsline {section}{\numberline {11.4}Forza di Lorentz}{43}{section.11.4}%
-\contentsline {section}{\numberline {11.5}Campo di magnetizzazione}{43}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Interpretazione}{43}{subsection.11.5.1}%
-\contentsline {section}{\numberline {11.6}Esempi}{43}{section.11.6}%
+\contentsline {section}{\numberline {11.2}Legge di Biot-Savart}{43}{section.11.2}%
+\contentsline {section}{\numberline {11.3}II equazione di Maxwell}{44}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Forza di Lorentz}{44}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Campo di magnetizzazione}{44}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Interpretazione}{44}{subsection.11.5.1}%
+\contentsline {section}{\numberline {11.6}Esempi}{44}{section.11.6}%
 \contentsline {chapter}{\numberline {12}Legge di Ampere-Maxwell e campo magnetico H}{45}{chapter.12}%
 \contentsline {section}{\numberline {12.1}IV equazione di Maxwell}{45}{section.12.1}%
 \contentsline {section}{\numberline {12.2}Teorema di equivalenza di Amp\`ere}{45}{section.12.2}%
